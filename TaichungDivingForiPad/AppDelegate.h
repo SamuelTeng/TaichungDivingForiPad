@@ -8,10 +8,17 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import "RootViewController.h"
+#import "DetailViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (nonatomic,strong) UISplitViewController *splitviewcontroller;
+@property (nonatomic,strong) UINavigationController *naviRoot;
+@property (nonatomic,strong) UINavigationController *naviDetail;
+@property (nonatomic,strong) RootViewController *rootViewController;
+@property (nonatomic,strong) DetailViewController *detailViewController;
 
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;

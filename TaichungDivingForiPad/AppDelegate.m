@@ -13,10 +13,27 @@
 @end
 
 @implementation AppDelegate
+@synthesize splitviewcontroller,rootViewController,detailViewController,naviDetail,naviRoot;
+
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.splitviewcontroller = [[UISplitViewController alloc] init];
+    self.rootViewController = [[RootViewController alloc] init];
+    self.detailViewController = [[DetailViewController alloc] init];
+    self.naviRoot = [[UINavigationController alloc] initWithRootViewController:rootViewController];
+    self.naviDetail = [[UINavigationController alloc] initWithRootViewController:detailViewController];
+    
+    self.splitviewcontroller.viewControllers = [NSArray arrayWithObjects:naviRoot,naviDetail, nil];
+    self.splitviewcontroller.delegate = self.detailViewController;
+    
+    self.window.rootViewController = self.splitviewcontroller;
+    
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
