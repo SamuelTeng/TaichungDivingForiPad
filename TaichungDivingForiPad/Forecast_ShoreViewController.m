@@ -44,19 +44,19 @@
     [self.webView loadRequest:addressRequest];
     
     //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChanged:) name:UIDeviceOrientationDidChangeNotification object:nil];
-    toolBar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, [[UIScreen mainScreen]bounds].size.height-44, [[UIScreen mainScreen] bounds].size.width, 44)];
-    [self updateBarBunttonItems];
     
+    toolBar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, [[UIScreen mainScreen]bounds].size.height-44, [[UIScreen mainScreen] bounds].size.width, 44)];
+    //UIInterfaceOrientation deviceOrientation;
     UIDeviceOrientation deviceOrientation = [UIDevice currentDevice].orientation;
     if (UIDeviceOrientationIsLandscape(deviceOrientation)) {
-        toolBar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, [[UIScreen mainScreen]bounds].size.height-44, [[UIScreen mainScreen] bounds].size.width, 44)];
+        toolBar.frame = CGRectMake(0, self.view.bounds.size.height-44, [[UIScreen mainScreen] bounds].size.width, 44);
     }
-    
+    [self updateBarBunttonItems];
     spinner=[[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
     
     [self.view addSubview:self.webView];
     [self.webView addSubview:toolBar];
-    self.view.autoresizesSubviews = YES;
+    //self.view.autoresizesSubviews = YES;
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -99,18 +99,26 @@
         self.webView.frame=self.view.bounds;
         self.webView.scalesPageToFit = YES;
         spinner.frame=self.view.bounds;
+        toolBar.frame = CGRectMake(0, self.view.bounds.size.height-44, self.view.bounds.size.width, 44);
+        NSLog(@"%d",toolBar.barPosition);
     }else if (interfaceOrientation == UIInterfaceOrientationMaskPortrait){
         self.webView.frame=self.view.bounds;
         self.webView.scalesPageToFit = YES;
         spinner.frame=self.view.bounds;
+        toolBar.frame = CGRectMake(0, [[UIScreen mainScreen]bounds].size.height-44, [[UIScreen mainScreen] bounds].size.width, 44);
+        NSLog(@"%d",toolBar.barPosition);
     }else if (interfaceOrientation == UIInterfaceOrientationLandscapeRight){
         self.webView.frame=self.view.bounds;
         self.webView.scalesPageToFit = YES;
         spinner.frame=self.view.bounds;
+        toolBar.frame = CGRectMake(0, self.view.bounds.size.height-44, self.view.bounds.size.width, 44);
+        NSLog(@"%d",toolBar.barPosition);
     }else{
         self.webView.frame=self.view.bounds;
         self.webView.scalesPageToFit = YES;
         spinner.frame=self.view.bounds;
+        toolBar.frame = CGRectMake(0, [[UIScreen mainScreen]bounds].size.height-44, [[UIScreen mainScreen] bounds].size.width, 44);
+        NSLog(@"%d",toolBar.barPosition);
     }
     
 }
