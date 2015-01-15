@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>70B5288C-6EF7-4C1D-80BB-044674251445</string>
+	<key>IDESourceControlProjectName</key>
+	<string>TaichungDivingForiPad</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BDE03211D10AC241851F9A10B01DE76CC9C56B26</key>
+		<string>https://github.com/SamuelTeng/TaichungDivingForiPad.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TaichungDivingForiPad.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BDE03211D10AC241851F9A10B01DE76CC9C56B26</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/SamuelTeng/TaichungDivingForiPad.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BDE03211D10AC241851F9A10B01DE76CC9C56B26</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BDE03211D10AC241851F9A10B01DE76CC9C56B26</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TaichungDivingForiPad</string>
+		</dict>
+	</array>
+</dict>
+</plist>
