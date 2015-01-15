@@ -11,7 +11,13 @@
 #import "RootViewController.h"
 #import "DetailViewController.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+#import "Reachability.h"
+
+@interface AppDelegate : UIResponder <UIApplicationDelegate>{
+    
+    Reachability *reachability;
+
+}
 
 @property (strong, nonatomic) UIWindow *window;
 @property (nonatomic,strong) UISplitViewController *splitviewcontroller;
@@ -19,6 +25,7 @@
 @property (nonatomic,strong) UINavigationController *naviDetail;
 @property (nonatomic,strong) RootViewController *rootViewController;
 @property (nonatomic,strong) DetailViewController *detailViewController;
+@property (nonatomic,strong) UIBarButtonItem *rootPopoverButtonItem;
 
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;

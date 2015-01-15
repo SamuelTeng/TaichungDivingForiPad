@@ -15,6 +15,9 @@
 		57AD329F1A66139C00B52385 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57AD329E1A66139C00B52385 /* Images.xcassets */; };
 		57AD32A21A66140200B52385 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57AD32A11A66140200B52385 /* RootViewController.m */; };
 		57AD32A51A66160C00B52385 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57AD32A41A66160C00B52385 /* DetailViewController.m */; };
+		57B6F7E31A6749B300148AA6 /* Forecast_ShoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B6F7E21A6749B300148AA6 /* Forecast_ShoreViewController.m */; };
+		57B6F7E61A67642F00148AA6 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B6F7E51A67642F00148AA6 /* Reachability.m */; };
+		57B6F7E81A6766AC00148AA6 /* icons.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 57B6F7E71A6766AC00148AA6 /* icons.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,11 +41,16 @@
 		57AD328E1A660B5D00B52385 /* TaichungDivingForiPadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaichungDivingForiPadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		57AD32931A660B5D00B52385 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57AD32941A660B5D00B52385 /* TaichungDivingForiPadTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaichungDivingForiPadTests.m; sourceTree = "<group>"; };
-		57AD329E1A66139C00B52385 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		57AD329E1A66139C00B52385 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = TaichungDivingForiPad/Images.xcassets; sourceTree = "<group>"; };
 		57AD32A01A66140200B52385 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		57AD32A11A66140200B52385 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		57AD32A31A66160C00B52385 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		57AD32A41A66160C00B52385 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		57B6F7E11A6749B300148AA6 /* Forecast_ShoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Forecast_ShoreViewController.h; sourceTree = "<group>"; };
+		57B6F7E21A6749B300148AA6 /* Forecast_ShoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Forecast_ShoreViewController.m; sourceTree = "<group>"; };
+		57B6F7E41A67642F00148AA6 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = ../Reachability.h; sourceTree = "<group>"; };
+		57B6F7E51A67642F00148AA6 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = ../Reachability.m; sourceTree = "<group>"; };
+		57B6F7E71A6766AC00148AA6 /* icons.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = icons.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +74,7 @@
 		57AD32691A660B5D00B52385 = {
 			isa = PBXGroup;
 			children = (
+				57B6F7E91A6766B400148AA6 /* icons */,
 				57AD32741A660B5D00B52385 /* TaichungDivingForiPad */,
 				57AD32911A660B5D00B52385 /* TaichungDivingForiPadTests */,
 				57AD32731A660B5D00B52385 /* Products */,
@@ -84,13 +93,14 @@
 		57AD32741A660B5D00B52385 /* TaichungDivingForiPad */ = {
 			isa = PBXGroup;
 			children = (
-				57AD329E1A66139C00B52385 /* Images.xcassets */,
 				57AD32791A660B5D00B52385 /* AppDelegate.h */,
 				57AD327A1A660B5D00B52385 /* AppDelegate.m */,
 				57AD32A31A66160C00B52385 /* DetailViewController.h */,
 				57AD32A41A66160C00B52385 /* DetailViewController.m */,
 				57AD32A01A66140200B52385 /* RootViewController.h */,
 				57AD32A11A66140200B52385 /* RootViewController.m */,
+				57B6F7E11A6749B300148AA6 /* Forecast_ShoreViewController.h */,
+				57B6F7E21A6749B300148AA6 /* Forecast_ShoreViewController.m */,
 				57AD32871A660B5D00B52385 /* LaunchScreen.xib */,
 				57AD32751A660B5D00B52385 /* Supporting Files */,
 			);
@@ -100,6 +110,8 @@
 		57AD32751A660B5D00B52385 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				57B6F7E41A67642F00148AA6 /* Reachability.h */,
+				57B6F7E51A67642F00148AA6 /* Reachability.m */,
 				57AD327C1A660B5D00B52385 /* TaichungDivingForiPad.xcdatamodeld */,
 				57AD32761A660B5D00B52385 /* Info.plist */,
 				57AD32771A660B5D00B52385 /* main.m */,
@@ -122,6 +134,15 @@
 				57AD32931A660B5D00B52385 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		57B6F7E91A6766B400148AA6 /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				57AD329E1A66139C00B52385 /* Images.xcassets */,
+				57B6F7E71A6766AC00148AA6 /* icons.bundle */,
+			);
+			name = icons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,6 +226,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57B6F7E81A6766AC00148AA6 /* icons.bundle in Resources */,
 				57AD32891A660B5D00B52385 /* LaunchScreen.xib in Resources */,
 				57AD329F1A66139C00B52385 /* Images.xcassets in Resources */,
 			);
@@ -227,8 +249,10 @@
 				57AD32A51A66160C00B52385 /* DetailViewController.m in Sources */,
 				57AD327B1A660B5D00B52385 /* AppDelegate.m in Sources */,
 				57AD327E1A660B5D00B52385 /* TaichungDivingForiPad.xcdatamodeld in Sources */,
+				57B6F7E61A67642F00148AA6 /* Reachability.m in Sources */,
 				57AD32A21A66140200B52385 /* RootViewController.m in Sources */,
 				57AD32781A660B5D00B52385 /* main.m in Sources */,
+				57B6F7E31A6749B300148AA6 /* Forecast_ShoreViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

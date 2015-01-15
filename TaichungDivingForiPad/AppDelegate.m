@@ -14,14 +14,24 @@
 
 @implementation AppDelegate
 @synthesize splitviewcontroller,rootViewController,detailViewController,naviDetail,naviRoot;
-
+@synthesize rootPopoverButtonItem;
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
+    reachability = [Reachability reachabilityForInternetConnection];
+    [reachability startNotifier];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.splitviewcontroller = [[UISplitViewController alloc] init];
+    self.splitviewcontroller.presentsWithGesture = YES;
+    
+    if (NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_7_1) {
+        NSLog(@"os version above ios7.1");
+        self.splitviewcontroller.preferredDisplayMode = UISplitViewControllerDisplayModeAutomatic;
+    }
     self.rootViewController = [[RootViewController alloc] init];
     self.detailViewController = [[DetailViewController alloc] init];
     self.naviRoot = [[UINavigationController alloc] initWithRootViewController:rootViewController];
@@ -36,6 +46,52 @@
     
     return YES;
 }
+
+/*Called by Reachability whenever status changes.*/
+-(void)reachabilityChanged:(NSNotification *)note
+{
+    
+    Reachability* curReach = [note object];
+    NSParameterAssert([curReach isKindOfClass: [Reachability class]]);
+    [self updateInterfaceWithReachability: curReach];
+}
+
+/*Implementation for Network status notification*/
+- (void)updateInterfaceWithReachability:(Reachability *)curReach
+{
+    NetworkStatus curStatus;
+    
+    BOOL m_bReachableViaWWAN;
+    BOOL m_bReachableViaWifi;
+    BOOL m_bReachable;
+    //  According to curReach, modify current internal flags
+    
+    //  Internet reachability
+    //  Need network status to know real reachability method
+    curStatus = [curReach currentReachabilityStatus];
+    
+    //  Modify current network status flags
+    if (curStatus == ReachableViaWWAN) {
+        m_bReachableViaWWAN = true;
+    } else {
+        m_bReachableViaWWAN = false;
+    }
+    
+    if (curStatus == ReachableViaWiFi) {
+        m_bReachableViaWifi = true;
+    } else {
+        m_bReachableViaWifi = false;
+    }
+    
+    //  Reachable is the OR result of two internal connection flags
+    m_bReachable = (m_bReachableViaWifi || m_bReachableViaWWAN);
+    
+    if (!m_bReachable) {
+        UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"注意" message:@"無法連結網路\n請檢查wifi或行動網路設定" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [av show];
+    }
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
