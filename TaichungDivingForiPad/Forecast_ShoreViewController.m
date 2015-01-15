@@ -56,7 +56,7 @@
     
     [self.view addSubview:self.webView];
     [self.webView addSubview:toolBar];
-    
+    self.view.autoresizesSubviews = YES;
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -67,7 +67,17 @@
     spinner.frame=self.view.bounds;
     
 }
-/*
+
+- (BOOL)shouldAutorotate
+{
+    return YES;
+}
+
+- (NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskAllButUpsideDown;
+}
+
 - (void)viewWillTransitionToSize:(CGSize)size
        withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
 {
@@ -86,7 +96,21 @@
 {
     //used during rotation
     if (interfaceOrientation == UIInterfaceOrientationLandscapeLeft) {
-        //self.webView.frame = CGRectMake(<#CGFloat x#>, <#CGFloat y#>, <#CGFloat width#>, <#CGFloat height#>)
+        self.webView.frame=self.view.bounds;
+        self.webView.scalesPageToFit = YES;
+        spinner.frame=self.view.bounds;
+    }else if (interfaceOrientation == UIInterfaceOrientationMaskPortrait){
+        self.webView.frame=self.view.bounds;
+        self.webView.scalesPageToFit = YES;
+        spinner.frame=self.view.bounds;
+    }else if (interfaceOrientation == UIInterfaceOrientationLandscapeRight){
+        self.webView.frame=self.view.bounds;
+        self.webView.scalesPageToFit = YES;
+        spinner.frame=self.view.bounds;
+    }else{
+        self.webView.frame=self.view.bounds;
+        self.webView.scalesPageToFit = YES;
+        spinner.frame=self.view.bounds;
     }
     
 }
@@ -94,14 +118,15 @@
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
 {
     //used after rotation done
+    /*
     if (fromInterfaceOrientation == UIInterfaceOrientationLandscapeLeft) {
-        
+        self.webView.frame = CGRectZero;
     }else if (fromInterfaceOrientation == UIInterfaceOrientationLandscapeRight){
-        
+        self.webView.frame = CGRectZero;
     }
-    
+    */
 }
-*/
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
