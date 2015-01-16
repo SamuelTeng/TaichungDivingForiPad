@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		182CCC3A1A68D32800DE98C7 /* Forecast_ToursiteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182CCC391A68D32800DE98C7 /* Forecast_ToursiteViewController.m */; };
 		57AD32781A660B5D00B52385 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 57AD32771A660B5D00B52385 /* main.m */; };
 		57AD327B1A660B5D00B52385 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 57AD327A1A660B5D00B52385 /* AppDelegate.m */; };
 		57AD327E1A660B5D00B52385 /* TaichungDivingForiPad.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 57AD327C1A660B5D00B52385 /* TaichungDivingForiPad.xcdatamodeld */; };
@@ -31,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		182CCC381A68D32800DE98C7 /* Forecast_ToursiteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Forecast_ToursiteViewController.h; sourceTree = "<group>"; };
+		182CCC391A68D32800DE98C7 /* Forecast_ToursiteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Forecast_ToursiteViewController.m; sourceTree = "<group>"; };
 		57AD32721A660B5D00B52385 /* TaichungDivingForiPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaichungDivingForiPad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57AD32761A660B5D00B52385 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57AD32771A660B5D00B52385 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -101,7 +104,8 @@
 				57AD32A11A66140200B52385 /* RootViewController.m */,
 				57B6F7E11A6749B300148AA6 /* Forecast_ShoreViewController.h */,
 				57B6F7E21A6749B300148AA6 /* Forecast_ShoreViewController.m */,
-				57AD32871A660B5D00B52385 /* LaunchScreen.xib */,
+				182CCC381A68D32800DE98C7 /* Forecast_ToursiteViewController.h */,
+				182CCC391A68D32800DE98C7 /* Forecast_ToursiteViewController.m */,
 				57AD32751A660B5D00B52385 /* Supporting Files */,
 			);
 			path = TaichungDivingForiPad;
@@ -110,6 +114,7 @@
 		57AD32751A660B5D00B52385 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				57AD32871A660B5D00B52385 /* LaunchScreen.xib */,
 				57B6F7E41A67642F00148AA6 /* Reachability.h */,
 				57B6F7E51A67642F00148AA6 /* Reachability.m */,
 				57AD327C1A660B5D00B52385 /* TaichungDivingForiPad.xcdatamodeld */,
@@ -246,6 +251,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				182CCC3A1A68D32800DE98C7 /* Forecast_ToursiteViewController.m in Sources */,
 				57AD32A51A66160C00B52385 /* DetailViewController.m in Sources */,
 				57AD327B1A660B5D00B52385 /* AppDelegate.m in Sources */,
 				57AD327E1A660B5D00B52385 /* TaichungDivingForiPad.xcdatamodeld in Sources */,
