@@ -39,6 +39,8 @@
 {
     self = [super init];
     if (self) {
+        self.title = @"非潛Book";
+        
         logArr = [[NSMutableArray alloc] init];
         weatherArr = [[NSMutableArray alloc] init];
         tourArr = [[NSMutableArray alloc] init];

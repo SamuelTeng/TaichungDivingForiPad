@@ -34,6 +34,8 @@
 {
     [super loadView];
     
+    self.title = @"旅遊天氣";
+    
     appDelegate = [[UIApplication sharedApplication] delegate];
     
     self.webView = [[UIWebView alloc] initWithFrame:CGRectZero];

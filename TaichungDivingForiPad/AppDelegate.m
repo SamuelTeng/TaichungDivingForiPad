@@ -35,6 +35,7 @@
     self.rootViewController = [[RootViewController alloc] init];
     self.detailViewController = [[DetailViewController alloc] init];
     self.naviRoot = [[UINavigationController alloc] initWithRootViewController:rootViewController];
+    
     self.naviDetail = [[UINavigationController alloc] initWithRootViewController:detailViewController];
     
     self.splitviewcontroller.viewControllers = [NSArray arrayWithObjects:naviRoot,naviDetail, nil];
