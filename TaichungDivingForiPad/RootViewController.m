@@ -10,6 +10,7 @@
 #import "AppDelegate.h"
 #import "Forecast_ShoreViewController.h"
 #import "Forecast_ToursiteViewController.h"
+#import "ScheduleTableViewController.h"
 
 #define kSection 3
 #define kLog 0
@@ -21,6 +22,7 @@
     AppDelegate *appDelegate;
     Forecast_ShoreViewController *shore_forecast;
     Forecast_ToursiteViewController *toursite_forecast;
+    ScheduleTableViewController *domesticTour;
 }
 
 @end
@@ -59,6 +61,7 @@
         appDelegate = [[UIApplication sharedApplication] delegate];
         shore_forecast = [[Forecast_ShoreViewController alloc] init];
         toursite_forecast = [[Forecast_ToursiteViewController alloc] init];
+        domesticTour = [[ScheduleTableViewController alloc] init];
         
         
     }
@@ -171,6 +174,11 @@
             }
             break;
         case kTour:
+            
+            if (row == 0) {
+                [viewControllerArray addObject:domesticTour];
+                appDelegate.splitviewcontroller.delegate = domesticTour;
+            }
             
             break;
             

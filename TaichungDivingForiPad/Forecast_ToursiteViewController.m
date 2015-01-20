@@ -107,25 +107,25 @@
         self.webView.scalesPageToFit = YES;
         spinner.frame=self.view.bounds;
         toolBar.frame = CGRectMake(0, self.view.bounds.size.height-44, self.view.bounds.size.width, 44);
-        NSLog(@"%ld",toolBar.barPosition);
+        //NSLog(@"%ld",toolBar.barPosition);
     }else if (interfaceOrientation == UIInterfaceOrientationMaskPortrait){
         self.webView.frame=self.view.bounds;
         self.webView.scalesPageToFit = YES;
         spinner.frame=self.view.bounds;
         toolBar.frame = CGRectMake(0, [[UIScreen mainScreen]bounds].size.height-44, [[UIScreen mainScreen] bounds].size.width, 44);
-        NSLog(@"%ld",toolBar.barPosition);
+        //NSLog(@"%ld",toolBar.barPosition);
     }else if (interfaceOrientation == UIInterfaceOrientationLandscapeRight){
         self.webView.frame=self.view.bounds;
         self.webView.scalesPageToFit = YES;
         spinner.frame=self.view.bounds;
         toolBar.frame = CGRectMake(0, self.view.bounds.size.height-44, self.view.bounds.size.width, 44);
-        NSLog(@"%ld",toolBar.barPosition);
+        //NSLog(@"%ld",toolBar.barPosition);
     }else{
         self.webView.frame=self.view.bounds;
         self.webView.scalesPageToFit = YES;
         spinner.frame=self.view.bounds;
         toolBar.frame = CGRectMake(0, [[UIScreen mainScreen]bounds].size.height-44, [[UIScreen mainScreen] bounds].size.width, 44);
-        NSLog(@"%ld",toolBar.barPosition);
+        //NSLog(@"%ld",toolBar.barPosition);
     }
     
 }

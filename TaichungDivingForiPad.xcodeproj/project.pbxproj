@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		182CCC3A1A68D32800DE98C7 /* Forecast_ToursiteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182CCC391A68D32800DE98C7 /* Forecast_ToursiteViewController.m */; };
+		57A6D11A1A6DE4B5001FC333 /* ScheduleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57A6D1191A6DE4B5001FC333 /* ScheduleTableViewController.m */; };
+		57A6D11D1A6DF2D8001FC333 /* TourDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57A6D11C1A6DF2D8001FC333 /* TourDetailViewController.m */; };
 		57AD32781A660B5D00B52385 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 57AD32771A660B5D00B52385 /* main.m */; };
 		57AD327B1A660B5D00B52385 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 57AD327A1A660B5D00B52385 /* AppDelegate.m */; };
 		57AD327E1A660B5D00B52385 /* TaichungDivingForiPad.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 57AD327C1A660B5D00B52385 /* TaichungDivingForiPad.xcdatamodeld */; };
@@ -34,6 +36,10 @@
 /* Begin PBXFileReference section */
 		182CCC381A68D32800DE98C7 /* Forecast_ToursiteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Forecast_ToursiteViewController.h; sourceTree = "<group>"; };
 		182CCC391A68D32800DE98C7 /* Forecast_ToursiteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Forecast_ToursiteViewController.m; sourceTree = "<group>"; };
+		57A6D1181A6DE4B5001FC333 /* ScheduleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleTableViewController.h; sourceTree = "<group>"; };
+		57A6D1191A6DE4B5001FC333 /* ScheduleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleTableViewController.m; sourceTree = "<group>"; };
+		57A6D11B1A6DF2D8001FC333 /* TourDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TourDetailViewController.h; sourceTree = "<group>"; };
+		57A6D11C1A6DF2D8001FC333 /* TourDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TourDetailViewController.m; sourceTree = "<group>"; };
 		57AD32721A660B5D00B52385 /* TaichungDivingForiPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaichungDivingForiPad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57AD32761A660B5D00B52385 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57AD32771A660B5D00B52385 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -106,6 +112,10 @@
 				57B6F7E21A6749B300148AA6 /* Forecast_ShoreViewController.m */,
 				182CCC381A68D32800DE98C7 /* Forecast_ToursiteViewController.h */,
 				182CCC391A68D32800DE98C7 /* Forecast_ToursiteViewController.m */,
+				57A6D1181A6DE4B5001FC333 /* ScheduleTableViewController.h */,
+				57A6D1191A6DE4B5001FC333 /* ScheduleTableViewController.m */,
+				57A6D11B1A6DF2D8001FC333 /* TourDetailViewController.h */,
+				57A6D11C1A6DF2D8001FC333 /* TourDetailViewController.m */,
 				57AD32751A660B5D00B52385 /* Supporting Files */,
 			);
 			path = TaichungDivingForiPad;
@@ -252,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				182CCC3A1A68D32800DE98C7 /* Forecast_ToursiteViewController.m in Sources */,
+				57A6D11D1A6DF2D8001FC333 /* TourDetailViewController.m in Sources */,
 				57AD32A51A66160C00B52385 /* DetailViewController.m in Sources */,
 				57AD327B1A660B5D00B52385 /* AppDelegate.m in Sources */,
 				57AD327E1A660B5D00B52385 /* TaichungDivingForiPad.xcdatamodeld in Sources */,
@@ -259,6 +270,7 @@
 				57AD32A21A66140200B52385 /* RootViewController.m in Sources */,
 				57AD32781A660B5D00B52385 /* main.m in Sources */,
 				57B6F7E31A6749B300148AA6 /* Forecast_ShoreViewController.m in Sources */,
+				57A6D11A1A6DE4B5001FC333 /* ScheduleTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

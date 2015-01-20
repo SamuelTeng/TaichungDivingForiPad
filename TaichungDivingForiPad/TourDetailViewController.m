@@ -1,16 +1,18 @@
 //
-//  Forecast_ShoreViewController.m
+//  TourDetailViewController.m
 //  TaichungDivingForiPad
 //
-//  Created by Samuel Teng on 2015/1/15.
+//  Created by Samuel Teng on 2015/1/20.
 //  Copyright (c) 2015年 Samuel Teng. All rights reserved.
 //
 
-#import "Forecast_ShoreViewController.h"
+#import "TourDetailViewController.h"
 #import "AppDelegate.h"
 
-@interface Forecast_ShoreViewController (){
+
+@interface TourDetailViewController (){
     
+    UIActivityIndicatorView *spinner;
     UIToolbar *toolBar;
     UIBarButtonItem *forwardButton;
     UIBarButtonItem *backwardButton;
@@ -19,31 +21,22 @@
     UIBarButtonItem *fixedSpace;
     UIBarButtonItem *flexibleSpace;
     
-    UIActivityIndicatorView *spinner;
-    
     AppDelegate *appDelegate;
 }
 
 @end
 
-@implementation Forecast_ShoreViewController
-
-@synthesize webView;
+@implementation TourDetailViewController
+@synthesize webView,pageData;
 
 -(void)loadView
 {
     [super loadView];
     
-    self.title = @"海面天氣";
+    self.title = @"國內旅遊";
     
     appDelegate = [[UIApplication sharedApplication] delegate];
-    
-    self.webView = [[UIWebView alloc] initWithFrame:CGRectZero];
-    self.webView.delegate = self;
-    NSString *addressString = @"http://www.cwb.gov.tw/V7/forecast/fishery/NSea.htm";
-    NSURL *addressUrl = [NSURL URLWithString:addressString];
-    NSURLRequest* addressRequest = [NSURLRequest requestWithURL:addressUrl];
-    [self.webView loadRequest:addressRequest];
+        
     
     //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChanged:) name:UIDeviceOrientationDidChangeNotification object:nil];
     
@@ -55,11 +48,11 @@
     }else{
         toolBar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, [[UIScreen mainScreen]bounds].size.height-44, [[UIScreen mainScreen] bounds].size.width, 44)];
     }
-    [self updateBarBunttonItems];
+    //[self updateBarBunttonItems];
     spinner=[[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
     
-    [self.view addSubview:self.webView];
-    [self.webView addSubview:toolBar];
+    
+    
     //self.view.autoresizesSubviews = YES;
 }
 
@@ -69,21 +62,28 @@
     self.webView.frame=self.view.bounds;
     self.webView.scalesPageToFit = YES;
     spinner.frame=self.view.bounds;
+    [self.webView addSubview:toolBar];
     UIDeviceOrientation deviceOrientation = [UIDevice currentDevice].orientation;
     if (UIDeviceOrientationIsLandscape(deviceOrientation)) {
         toolBar.frame = CGRectMake(0, self.view.bounds.size.height-44, self.view.bounds.size.width, 44);
     }
 }
 
-- (BOOL)shouldAutorotate
+-(void)setPageData:(NSDictionary *)page_Data
 {
-    return YES;
+    pageData=page_Data;
+    self.webView=[[UIWebView alloc]initWithFrame:CGRectZero];
+    /*set the delegate to catch the timing of load and finish load web view*/
+    self.webView.delegate=self;
+    [self.view addSubview:self.webView];
+    self.title=[pageData objectForKey:@"page"];
+    
+    NSString *pathString=[pageData objectForKey:@"url"];
+    NSURL *pathURL=[[NSURL alloc]initWithString:pathString];
+    NSURLRequest *urlRequest=[[NSURLRequest alloc]initWithURL:pathURL];
+    [self.webView loadRequest:urlRequest];
 }
 
-- (NSUInteger)supportedInterfaceOrientations
-{
-    return UIInterfaceOrientationMaskAllButUpsideDown;
-}
 
 - (void)viewWillTransitionToSize:(CGSize)size
        withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
@@ -113,13 +113,13 @@
         self.webView.scalesPageToFit = YES;
         spinner.frame=self.view.bounds;
         toolBar.frame = CGRectMake(0, [[UIScreen mainScreen]bounds].size.height-44, [[UIScreen mainScreen] bounds].size.width, 44);
-        //NSLog(@"%ld",toolBar.barPosition);
+       // NSLog(@"%ld",toolBar.barPosition);
     }else if (interfaceOrientation == UIInterfaceOrientationLandscapeRight){
         self.webView.frame=self.view.bounds;
         self.webView.scalesPageToFit = YES;
         spinner.frame=self.view.bounds;
         toolBar.frame = CGRectMake(0, self.view.bounds.size.height-44, self.view.bounds.size.width, 44);
-        //NSLog(@"%ld",toolBar.barPosition);
+       // NSLog(@"%ld",toolBar.barPosition);
     }else{
         self.webView.frame=self.view.bounds;
         self.webView.scalesPageToFit = YES;
@@ -130,45 +130,6 @@
     
 }
 
-- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
-{
-    //used after rotation done
-    /*
-    if (fromInterfaceOrientation == UIInterfaceOrientationLandscapeLeft) {
-        self.webView.frame = CGRectZero;
-    }else if (fromInterfaceOrientation == UIInterfaceOrientationLandscapeRight){
-        self.webView.frame = CGRectZero;
-    }
-    */
-}
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-   
-}
-/*
-#pragma mark orientation change
-
--(void)orientationChanged:(NSNotification *)notification
-{
-    
-    UIDeviceOrientation deviceOrientation = [UIDevice currentDevice].orientation;
-    
-    if (UIDeviceOrientationIsLandscape(deviceOrientation)) {
-        toolBar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, [[UIScreen mainScreen]bounds].size.height-44, [[UIScreen mainScreen] bounds].size.width, 44)];
-        [self updateBarBunttonItems];
-        NSLog(@"device is Landscape");
-
-    }else if (UIDeviceOrientationIsPortrait(deviceOrientation)){
-        
-        toolBar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, [[UIScreen mainScreen]bounds].size.height-60, [[UIScreen mainScreen] bounds].size.width, 44)];
-        [self updateBarBunttonItems];
-        NSLog(@"device is portrait");
-    }
-    
-}
-*/
 #pragma mark UIWebView delegate
 
 -(void)webViewDidFinishLoad:(UIWebView *)webView
@@ -278,15 +239,14 @@
 }
 
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-    stopButton = nil;
-    refereshButton = nil;
-    forwardButton = nil;
-    backwardButton = nil;
-    self.webView = nil;
-    spinner = nil;
 }
 
 /*
