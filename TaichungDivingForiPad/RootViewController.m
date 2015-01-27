@@ -11,6 +11,7 @@
 #import "Forecast_ShoreViewController.h"
 #import "Forecast_ToursiteViewController.h"
 #import "ScheduleTableViewController.h"
+#import "ScheduleForeignTableViewController.h"
 
 #define kSection 3
 #define kLog 0
@@ -23,6 +24,7 @@
     Forecast_ShoreViewController *shore_forecast;
     Forecast_ToursiteViewController *toursite_forecast;
     ScheduleTableViewController *domesticTour;
+    ScheduleForeignTableViewController *foreignTour;
 }
 
 @end
@@ -62,7 +64,7 @@
         shore_forecast = [[Forecast_ShoreViewController alloc] init];
         toursite_forecast = [[Forecast_ToursiteViewController alloc] init];
         domesticTour = [[ScheduleTableViewController alloc] init];
-        
+        foreignTour = [[ScheduleForeignTableViewController alloc] init];
         
     }
     return self;
@@ -178,6 +180,9 @@
             if (row == 0) {
                 [viewControllerArray addObject:domesticTour];
                 appDelegate.splitviewcontroller.delegate = domesticTour;
+            }else if (row == 1){
+                [viewControllerArray addObject:foreignTour];
+                appDelegate.splitviewcontroller.delegate = foreignTour;
             }
             
             break;

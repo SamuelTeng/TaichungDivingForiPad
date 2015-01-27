@@ -228,7 +228,7 @@
           withBarButtonItem:(UIBarButtonItem *)barButtonItem
        forPopoverController:(UIPopoverController *)pc
 {
-    [barButtonItem setTitle:@"目錄"];
+    [barButtonItem setTitle:@"非潛Book"];
     [[self navigationItem] setLeftBarButtonItem:barButtonItem];
     appDelegate.rootPopoverButtonItem = barButtonItem;
 }

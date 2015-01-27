@@ -48,7 +48,7 @@
     }else{
         toolBar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, [[UIScreen mainScreen]bounds].size.height-44, [[UIScreen mainScreen] bounds].size.width, 44)];
     }
-    //[self updateBarBunttonItems];
+    // [self updateBarBunttonItems];
     spinner=[[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
     
     
@@ -210,7 +210,7 @@
           withBarButtonItem:(UIBarButtonItem *)barButtonItem
        forPopoverController:(UIPopoverController *)pc
 {
-    [barButtonItem setTitle:@"目錄"];
+    [barButtonItem setTitle:@"非潛Book"];
     [[self navigationItem] setLeftBarButtonItem:barButtonItem];
     appDelegate.rootPopoverButtonItem = barButtonItem;
 }

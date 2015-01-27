@@ -11,6 +11,7 @@
 @interface Forecast_ShoreViewController : UIViewController<UISplitViewControllerDelegate,UIWebViewDelegate>
 
 @property (nonatomic,strong)UIWebView *webView;
+@property (nonatomic,strong)UIBarButtonItem *popoverBarButton;
 
 -(UIBarButtonItem*)refreshBarButton;
 -(UIBarButtonItem *)stopBarButton;

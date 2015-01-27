@@ -28,7 +28,7 @@
 
 @implementation Forecast_ShoreViewController
 
-@synthesize webView;
+@synthesize webView,popoverBarButton;
 
 -(void)loadView
 {
@@ -37,6 +37,7 @@
     self.title = @"海面天氣";
     
     appDelegate = [[UIApplication sharedApplication] delegate];
+    
     
     self.webView = [[UIWebView alloc] initWithFrame:CGRectZero];
     self.webView.delegate = self;
@@ -249,8 +250,9 @@
           withBarButtonItem:(UIBarButtonItem *)barButtonItem
        forPopoverController:(UIPopoverController *)pc
 {
-    [barButtonItem setTitle:@"目錄"];
+    [barButtonItem setTitle:@"非潛Book"];
     [[self navigationItem] setLeftBarButtonItem:barButtonItem];
+    
     appDelegate.rootPopoverButtonItem = barButtonItem;
 }
 
@@ -261,6 +263,7 @@
     NSLog(@"ios version is 8.0 or above");
     
     if (displayMode == UISplitViewControllerDisplayModePrimaryHidden) {
+        
         [[self navigationItem] setLeftBarButtonItem:svc.displayModeButtonItem];
         appDelegate.rootPopoverButtonItem = svc.displayModeButtonItem;
     }else{

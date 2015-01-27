@@ -21,6 +21,7 @@
 		57B6F7E31A6749B300148AA6 /* Forecast_ShoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B6F7E21A6749B300148AA6 /* Forecast_ShoreViewController.m */; };
 		57B6F7E61A67642F00148AA6 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B6F7E51A67642F00148AA6 /* Reachability.m */; };
 		57B6F7E81A6766AC00148AA6 /* icons.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 57B6F7E71A6766AC00148AA6 /* icons.bundle */; };
+		57F9FB391A773426005B2AD9 /* ScheduleForeignTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F9FB381A773426005B2AD9 /* ScheduleForeignTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		57B6F7E41A67642F00148AA6 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = ../Reachability.h; sourceTree = "<group>"; };
 		57B6F7E51A67642F00148AA6 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = ../Reachability.m; sourceTree = "<group>"; };
 		57B6F7E71A6766AC00148AA6 /* icons.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = icons.bundle; sourceTree = "<group>"; };
+		57F9FB371A773426005B2AD9 /* ScheduleForeignTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleForeignTableViewController.h; sourceTree = "<group>"; };
+		57F9FB381A773426005B2AD9 /* ScheduleForeignTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleForeignTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +117,8 @@
 				182CCC391A68D32800DE98C7 /* Forecast_ToursiteViewController.m */,
 				57A6D1181A6DE4B5001FC333 /* ScheduleTableViewController.h */,
 				57A6D1191A6DE4B5001FC333 /* ScheduleTableViewController.m */,
+				57F9FB371A773426005B2AD9 /* ScheduleForeignTableViewController.h */,
+				57F9FB381A773426005B2AD9 /* ScheduleForeignTableViewController.m */,
 				57A6D11B1A6DF2D8001FC333 /* TourDetailViewController.h */,
 				57A6D11C1A6DF2D8001FC333 /* TourDetailViewController.m */,
 				57AD32751A660B5D00B52385 /* Supporting Files */,
@@ -262,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				182CCC3A1A68D32800DE98C7 /* Forecast_ToursiteViewController.m in Sources */,
+				57F9FB391A773426005B2AD9 /* ScheduleForeignTableViewController.m in Sources */,
 				57A6D11D1A6DF2D8001FC333 /* TourDetailViewController.m in Sources */,
 				57AD32A51A66160C00B52385 /* DetailViewController.m in Sources */,
 				57AD327B1A660B5D00B52385 /* AppDelegate.m in Sources */,
