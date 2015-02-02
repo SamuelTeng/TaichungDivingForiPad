@@ -10,6 +10,11 @@
 		182CCC3A1A68D32800DE98C7 /* Forecast_ToursiteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182CCC391A68D32800DE98C7 /* Forecast_ToursiteViewController.m */; };
 		5780BFD91A7F454D00111C78 /* LogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5780BFD81A7F454D00111C78 /* LogViewController.m */; };
 		5780BFDB1A7F501400111C78 /* ic_save_black_24dp.png in Resources */ = {isa = PBXBuildFile; fileRef = 5780BFDA1A7F501400111C78 /* ic_save_black_24dp.png */; };
+		5780BFDE1A7F534D00111C78 /* LogShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5780BFDD1A7F534D00111C78 /* LogShowViewController.m */; };
+		5780BFE11A7F540500111C78 /* LogDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5780BFE01A7F540500111C78 /* LogDatabase.m */; };
+		5780BFE41A7F576300111C78 /* ModelControler.m in Sources */ = {isa = PBXBuildFile; fileRef = 5780BFE31A7F576300111C78 /* ModelControler.m */; };
+		5780BFE71A7F57B600111C78 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5780BFE61A7F57B600111C78 /* PageViewController.m */; };
+		5780BFE91A7F5D0300111C78 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5780BFE81A7F5D0300111C78 /* UIKit.framework */; };
 		57A6D11A1A6DE4B5001FC333 /* ScheduleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57A6D1191A6DE4B5001FC333 /* ScheduleTableViewController.m */; };
 		57A6D11D1A6DF2D8001FC333 /* TourDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57A6D11C1A6DF2D8001FC333 /* TourDetailViewController.m */; };
 		57AD32781A660B5D00B52385 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 57AD32771A660B5D00B52385 /* main.m */; };
@@ -45,6 +50,15 @@
 		5780BFD71A7F454D00111C78 /* LogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogViewController.h; sourceTree = "<group>"; };
 		5780BFD81A7F454D00111C78 /* LogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogViewController.m; sourceTree = "<group>"; };
 		5780BFDA1A7F501400111C78 /* ic_save_black_24dp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_save_black_24dp.png; sourceTree = "<group>"; };
+		5780BFDC1A7F534D00111C78 /* LogShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogShowViewController.h; sourceTree = "<group>"; };
+		5780BFDD1A7F534D00111C78 /* LogShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogShowViewController.m; sourceTree = "<group>"; };
+		5780BFDF1A7F540500111C78 /* LogDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogDatabase.h; sourceTree = "<group>"; };
+		5780BFE01A7F540500111C78 /* LogDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogDatabase.m; sourceTree = "<group>"; };
+		5780BFE21A7F576300111C78 /* ModelControler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelControler.h; sourceTree = "<group>"; };
+		5780BFE31A7F576300111C78 /* ModelControler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelControler.m; sourceTree = "<group>"; };
+		5780BFE51A7F57B600111C78 /* PageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
+		5780BFE61A7F57B600111C78 /* PageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
+		5780BFE81A7F5D0300111C78 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		57A6D1181A6DE4B5001FC333 /* ScheduleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleTableViewController.h; sourceTree = "<group>"; };
 		57A6D1191A6DE4B5001FC333 /* ScheduleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleTableViewController.m; sourceTree = "<group>"; };
 		57A6D11B1A6DF2D8001FC333 /* TourDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TourDetailViewController.h; sourceTree = "<group>"; };
@@ -83,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5780BFE91A7F5D0300111C78 /* UIKit.framework in Frameworks */,
 				57C1181D1A7F0F1D00836186 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -97,10 +112,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5780BFEA1A7F5D2500111C78 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				5780BFE81A7F5D0300111C78 /* UIKit.framework */,
+				57C1181C1A7F0F1D00836186 /* CoreData.framework */,
+			);
+			name = Framework;
+			sourceTree = "<group>";
+		};
 		57AD32691A660B5D00B52385 = {
 			isa = PBXGroup;
 			children = (
-				57C1181C1A7F0F1D00836186 /* CoreData.framework */,
+				5780BFEA1A7F5D2500111C78 /* Framework */,
 				57C118181A7F0DF300836186 /* Database */,
 				57B6F7E91A6766B400148AA6 /* icons */,
 				57AD32741A660B5D00B52385 /* TaichungDivingForiPad */,
@@ -141,7 +165,13 @@
 				57C1181A1A7F0EA500836186 /* LogBookTableViewController.m */,
 				5780BFD71A7F454D00111C78 /* LogViewController.h */,
 				5780BFD81A7F454D00111C78 /* LogViewController.m */,
+				5780BFDC1A7F534D00111C78 /* LogShowViewController.h */,
+				5780BFDD1A7F534D00111C78 /* LogShowViewController.m */,
+				5780BFE51A7F57B600111C78 /* PageViewController.h */,
+				5780BFE61A7F57B600111C78 /* PageViewController.m */,
 				57AD32751A660B5D00B52385 /* Supporting Files */,
+				5780BFDF1A7F540500111C78 /* LogDatabase.h */,
+				5780BFE01A7F540500111C78 /* LogDatabase.m */,
 			);
 			path = TaichungDivingForiPad;
 			sourceTree = "<group>";
@@ -154,6 +184,8 @@
 				57B6F7E51A67642F00148AA6 /* Reachability.m */,
 				57AD32761A660B5D00B52385 /* Info.plist */,
 				57AD32771A660B5D00B52385 /* main.m */,
+				5780BFE21A7F576300111C78 /* ModelControler.h */,
+				5780BFE31A7F576300111C78 /* ModelControler.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -299,18 +331,22 @@
 			files = (
 				57C1181B1A7F0EA500836186 /* LogBookTableViewController.m in Sources */,
 				182CCC3A1A68D32800DE98C7 /* Forecast_ToursiteViewController.m in Sources */,
+				5780BFDE1A7F534D00111C78 /* LogShowViewController.m in Sources */,
 				57F9FB391A773426005B2AD9 /* ScheduleForeignTableViewController.m in Sources */,
 				57C118171A7F0DD500836186 /* DiveLog.m in Sources */,
 				57A6D11D1A6DF2D8001FC333 /* TourDetailViewController.m in Sources */,
+				5780BFE41A7F576300111C78 /* ModelControler.m in Sources */,
 				57AD32A51A66160C00B52385 /* DetailViewController.m in Sources */,
 				57AD327B1A660B5D00B52385 /* AppDelegate.m in Sources */,
 				5780BFD91A7F454D00111C78 /* LogViewController.m in Sources */,
 				57AD327E1A660B5D00B52385 /* TaichungDivingForiPad.xcdatamodeld in Sources */,
+				5780BFE71A7F57B600111C78 /* PageViewController.m in Sources */,
 				57B6F7E61A67642F00148AA6 /* Reachability.m in Sources */,
 				57AD32A21A66140200B52385 /* RootViewController.m in Sources */,
 				57AD32781A660B5D00B52385 /* main.m in Sources */,
 				57B6F7E31A6749B300148AA6 /* Forecast_ShoreViewController.m in Sources */,
 				57A6D11A1A6DE4B5001FC333 /* ScheduleTableViewController.m in Sources */,
+				5780BFE11A7F540500111C78 /* LogDatabase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

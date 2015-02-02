@@ -9,11 +9,14 @@
 #import "LogBookTableViewController.h"
 #import "AppDelegate.h"
 #import "DiveLog.h"
+#import "PageViewController.h"
+
 
 @interface LogBookTableViewController (){
     
     AppDelegate *delegate_logbook;
     DiveLog *diveLog;
+    PageViewController *pageViewController;
 }
 
 @end
@@ -43,6 +46,8 @@
 {
     [super loadView];
      delegate_logbook = [[UIApplication sharedApplication] delegate];
+    pageViewController = [[PageViewController alloc] init];
+    self.navigationController.navigationItem.hidesBackButton = YES;
 }
 
 - (void)viewDidLoad {
@@ -140,6 +145,14 @@
 
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    pageViewController.startPage = indexPath.row;//*((int *)indexPath.row);
+    pageViewController._section = indexPath.section;//*((int *)indexPath.section);
+    [delegate_logbook.naviDetail pushViewController:pageViewController animated:YES];
+    //NSLog(@"table: row= %i section = %i", indexPath.row, indexPath.section);
+}
 
 /*
 // Override to support rearranging the table view.

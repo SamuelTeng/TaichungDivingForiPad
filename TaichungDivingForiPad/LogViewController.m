@@ -186,8 +186,10 @@
             
             
             
-            [delegate.naviDetail pushViewController:logBookTableView animated:YES];
-            
+            //[delegate.naviDetail pushViewController:logBookTableView animated:YES];
+            [delegate.naviDetail presentViewController:logBookTableView animated:NO completion:^{
+                
+            }];
             
         }
             break;
