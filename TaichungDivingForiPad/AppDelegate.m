@@ -13,7 +13,7 @@
 @end
 
 @implementation AppDelegate
-@synthesize splitviewcontroller,rootViewController,detailViewController,naviDetail,naviRoot;
+@synthesize splitviewcontroller,rootViewController,detailViewController,logbookTableView,naviDetail,naviRoot;
 @synthesize rootPopoverButtonItem;
 
 
@@ -34,12 +34,13 @@
     }
     self.rootViewController = [[RootViewController alloc] init];
     self.detailViewController = [[DetailViewController alloc] init];
+    self.logbookTableView = [[LogBookTableViewController alloc] init];
     self.naviRoot = [[UINavigationController alloc] initWithRootViewController:rootViewController];
     
-    self.naviDetail = [[UINavigationController alloc] initWithRootViewController:detailViewController];
+    self.naviDetail = [[UINavigationController alloc] initWithRootViewController:logbookTableView];
     
     self.splitviewcontroller.viewControllers = [NSArray arrayWithObjects:naviRoot,naviDetail, nil];
-    self.splitviewcontroller.delegate = self.detailViewController;
+    self.splitviewcontroller.delegate = self.logbookTableView;
     
     self.window.rootViewController = self.splitviewcontroller;
     

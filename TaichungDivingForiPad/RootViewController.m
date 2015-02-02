@@ -12,6 +12,7 @@
 #import "Forecast_ToursiteViewController.h"
 #import "ScheduleTableViewController.h"
 #import "ScheduleForeignTableViewController.h"
+#import "LogBookTableViewController.h"
 
 #define kSection 3
 #define kLog 0
@@ -25,6 +26,7 @@
     Forecast_ToursiteViewController *toursite_forecast;
     ScheduleTableViewController *domesticTour;
     ScheduleForeignTableViewController *foreignTour;
+    LogBookTableViewController *logbookTable;
 }
 
 @end
@@ -65,6 +67,7 @@
         toursite_forecast = [[Forecast_ToursiteViewController alloc] init];
         domesticTour = [[ScheduleTableViewController alloc] init];
         foreignTour = [[ScheduleForeignTableViewController alloc] init];
+        logbookTable = [[LogBookTableViewController alloc] init];
         
     }
     return self;
@@ -154,7 +157,8 @@
     
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
     
     NSUInteger row = indexPath.row;
     [appDelegate.splitviewcontroller viewWillDisappear:YES];
@@ -163,6 +167,10 @@
     
     switch (indexPath.section) {
         case kLog:
+            if (row == 0) {
+                [viewControllerArray addObject:logbookTable];
+                appDelegate.splitviewcontroller.delegate = logbookTable;
+            }
             
             break;
         case kWeather:

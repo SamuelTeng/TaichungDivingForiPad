@@ -10,6 +10,7 @@
 #import <CoreData/CoreData.h>
 #import "RootViewController.h"
 #import "DetailViewController.h"
+#import "LogBookTableViewController.h"
 
 #import "Reachability.h"
 
@@ -25,6 +26,7 @@
 @property (nonatomic,strong) UINavigationController *naviDetail;
 @property (nonatomic,strong) RootViewController *rootViewController;
 @property (nonatomic,strong) DetailViewController *detailViewController;
+@property (nonatomic,strong) LogBookTableViewController *logbookTableView;
 @property (nonatomic,strong) UIBarButtonItem *rootPopoverButtonItem;
 
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
