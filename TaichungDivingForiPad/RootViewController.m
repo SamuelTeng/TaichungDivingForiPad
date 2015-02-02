@@ -13,6 +13,7 @@
 #import "ScheduleTableViewController.h"
 #import "ScheduleForeignTableViewController.h"
 #import "LogBookTableViewController.h"
+#import "LogViewController.h"
 
 #define kSection 3
 #define kLog 0
@@ -27,6 +28,7 @@
     ScheduleTableViewController *domesticTour;
     ScheduleForeignTableViewController *foreignTour;
     LogBookTableViewController *logbookTable;
+    LogViewController *logView;
 }
 
 @end
@@ -68,6 +70,7 @@
         domesticTour = [[ScheduleTableViewController alloc] init];
         foreignTour = [[ScheduleForeignTableViewController alloc] init];
         logbookTable = [[LogBookTableViewController alloc] init];
+        logView = [[LogViewController alloc] init];
         
     }
     return self;
@@ -170,6 +173,21 @@
             if (row == 0) {
                 [viewControllerArray addObject:logbookTable];
                 appDelegate.splitviewcontroller.delegate = logbookTable;
+            }else if (row == 1){
+                NSUInteger air = 0;
+                logView.logType = air;
+                [viewControllerArray addObject:logView];
+                appDelegate.splitviewcontroller.delegate = logView;
+            }else if (row == 2){
+                NSUInteger nitrogen = 1;
+                logView.logType = nitrogen;
+                [viewControllerArray addObject:logView];
+                appDelegate.splitviewcontroller.delegate = logView;
+            }else if (row == 3){
+                NSUInteger closedCircuit = 2;
+                logView.logType = closedCircuit;
+                [viewControllerArray addObject:logView];
+                appDelegate.splitviewcontroller.delegate = logView;
             }
             
             break;

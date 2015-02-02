@@ -14,7 +14,7 @@
 
 @property (nonatomic, retain) NSString * current;
 @property (nonatomic, retain) NSString * date;
-@property (nonatomic, retain) NSString * dive_time;
+@property (nonatomic, retain) NSNumber * dive_time;
 @property (nonatomic, retain) NSString * end_pressure;
 @property (nonatomic, retain) NSString * gas_type;
 @property (nonatomic, retain) NSString * helium;
