@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LogViewController : UIViewController<UITextFieldDelegate,UIPickerViewDelegate,UIPickerViewDataSource,UISplitViewControllerDelegate>
+@interface LogViewController : UIViewController<UITextFieldDelegate,UIPickerViewDelegate,UIPickerViewDataSource,UISplitViewControllerDelegate,UIAlertViewDelegate>
 @property (readonly , strong ,nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic,strong) UIScrollView *scrollView;
 @property (nonatomic,strong) UILabel *dateLabel;

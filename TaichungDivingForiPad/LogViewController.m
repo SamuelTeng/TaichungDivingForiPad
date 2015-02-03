@@ -16,6 +16,7 @@
     
     AppDelegate *delegate;
     LogBookTableViewController *logBookTableView;
+    BOOL saved;
     
 }
 
@@ -31,7 +32,8 @@
     [super loadView];
     scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
     scrollView.contentSize = CGSizeMake(self.view.bounds.size.width, 1500);
-    scrollView.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"scroll_background.png"]];
+    scrollView.backgroundColor = [UIColor whiteColor];
+    //scrollView.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"scroll_background.png"]];
     [self.view addSubview:scrollView];
     
     
@@ -52,7 +54,7 @@
     UIBarButtonItem *save = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed: @"ic_save_black_24dp.png"] style:UIBarButtonItemStylePlain target:self action:@selector(saveToData)];
     self.navigationItem.rightBarButtonItem = save;
     self.navigationItem.rightBarButtonItem.enabled = NO;
-    
+    saved = YES;
     
     
     
@@ -62,7 +64,7 @@
     managedObjectContext = delegate.managedObjectContext;
     
     logBookTableView = [[LogBookTableViewController alloc] init];
-    self.navigationController.navigationItem.hidesBackButton = YES;
+    
     
 }
 
@@ -82,16 +84,25 @@
     switch (logType) {
         case 0:
             
+            for (UIView *view in [scrollView subviews]) {
+                [view removeFromSuperview];
+            }
             [self textAndLabel];
             break;
             
         case 1:
             
+            for (UIView *view in [scrollView subviews]) {
+                [view removeFromSuperview];
+            }
             [self nitroxTextAndLabel];
             break;
             
         case 2:
             
+            for (UIView *view in [scrollView subviews]) {
+                [view removeFromSuperview];
+            }
             [self closedCircuitTextAndLabel];
             break;
             
@@ -99,6 +110,21 @@
             break;
     }
     
+}
+
+- (void)alertView:(UIAlertView *)alertView
+clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    switch (buttonIndex) {
+        case 0:
+            self.navigationItem.rightBarButtonItem.enabled = NO;
+            saved = NO;
+            scrollView.backgroundColor = [UIColor grayColor];
+            break;
+            
+        default:
+            break;
+    }
 }
 
 -(void)saveToData
@@ -187,9 +213,8 @@
             
             
             //[delegate.naviDetail pushViewController:logBookTableView animated:YES];
-            [delegate.naviDetail presentViewController:logBookTableView animated:NO completion:^{
-                
-            }];
+            UIAlertView *saveLog = [[UIAlertView alloc] initWithTitle:@"儲存成功" message:@"" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [saveLog show];
             
         }
             break;
@@ -287,8 +312,9 @@
             
             
             
-            [delegate.naviDetail pushViewController:logBookTableView animated:YES];
-            
+            //[delegate.naviDetail pushViewController:logBookTableView animated:YES];
+            UIAlertView *saveLog = [[UIAlertView alloc] initWithTitle:@"儲存成功" message:@"" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [saveLog show];
             
         }
             
@@ -398,8 +424,9 @@
             
             
             
-            [delegate.naviDetail pushViewController:logBookTableView animated:YES];
-            
+            //[delegate.naviDetail pushViewController:logBookTableView animated:YES];
+            UIAlertView *saveLog = [[UIAlertView alloc] initWithTitle:@"儲存成功" message:@"" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [saveLog show];
             
         }
             break;
@@ -1007,6 +1034,14 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [textField resignFirstResponder];
+    return YES;
+}
+
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+    if (!saved) {
+        return NO;
+    }
     return YES;
 }
 
