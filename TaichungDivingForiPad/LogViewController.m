@@ -213,7 +213,7 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
             
             
             //[delegate.naviDetail pushViewController:logBookTableView animated:YES];
-            UIAlertView *saveLog = [[UIAlertView alloc] initWithTitle:@"儲存成功" message:@"" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            UIAlertView *saveLog = [[UIAlertView alloc] initWithTitle:@"儲存成功" message:@"請點選\"日誌首頁\"回到目錄" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
             [saveLog show];
             
         }
@@ -313,7 +313,7 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
             
             
             //[delegate.naviDetail pushViewController:logBookTableView animated:YES];
-            UIAlertView *saveLog = [[UIAlertView alloc] initWithTitle:@"儲存成功" message:@"" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            UIAlertView *saveLog = [[UIAlertView alloc] initWithTitle:@"儲存成功" message:@"請點選\"日誌首頁\"回到目錄" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
             [saveLog show];
             
         }
@@ -425,7 +425,7 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
             
             
             //[delegate.naviDetail pushViewController:logBookTableView animated:YES];
-            UIAlertView *saveLog = [[UIAlertView alloc] initWithTitle:@"儲存成功" message:@"" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            UIAlertView *saveLog = [[UIAlertView alloc] initWithTitle:@"儲存成功" message:@"請點選\"日誌首頁\"回到目錄" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
             [saveLog show];
             
         }
@@ -1779,7 +1779,7 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
     oxygenField.backgroundColor = [UIColor clearColor];
     [oxygenField setTag:113];
     oxygenField.delegate = self;
-    oxygenField.placeholder = @"";
+    oxygenField.placeholder = @"%";
     oxygenField.borderStyle = UITextBorderStyleRoundedRect;
     oxygenField.adjustsFontSizeToFitWidth = YES;
     oxygenField.textAlignment = NSTextAlignmentCenter;
@@ -1794,7 +1794,7 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
     nitrogenField.backgroundColor = [UIColor clearColor];
     [nitrogenField setTag:114];
     nitrogenField.delegate = self;
-    nitrogenField.placeholder = @"";
+    nitrogenField.placeholder = @"%";
     nitrogenField.borderStyle = UITextBorderStyleRoundedRect;
     nitrogenField.textAlignment = NSTextAlignmentCenter;
     nitrogenField.adjustsFontSizeToFitWidth = YES;
@@ -1995,7 +1995,7 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
     oxygenField.backgroundColor = [UIColor clearColor];
     [oxygenField setTag:113];
     oxygenField.delegate = self;
-    oxygenField.placeholder = @"in minutes";
+    oxygenField.placeholder = @"%";
     oxygenField.borderStyle = UITextBorderStyleRoundedRect;
     oxygenField.adjustsFontSizeToFitWidth = YES;
     oxygenField.textAlignment = NSTextAlignmentCenter;
@@ -2010,7 +2010,7 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
     nitrogenField.backgroundColor = [UIColor clearColor];
     [nitrogenField setTag:114];
     nitrogenField.delegate = self;
-    nitrogenField.placeholder = @"/%/";
+    nitrogenField.placeholder = @"%";
     nitrogenField.borderStyle = UITextBorderStyleRoundedRect;
     nitrogenField.textAlignment = NSTextAlignmentCenter;
     nitrogenField.adjustsFontSizeToFitWidth = YES;

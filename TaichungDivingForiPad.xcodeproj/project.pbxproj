@@ -25,6 +25,7 @@
 		57AD329F1A66139C00B52385 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57AD329E1A66139C00B52385 /* Images.xcassets */; };
 		57AD32A21A66140200B52385 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57AD32A11A66140200B52385 /* RootViewController.m */; };
 		57AD32A51A66160C00B52385 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57AD32A41A66160C00B52385 /* DetailViewController.m */; };
+		57AE37A41A831808003309E1 /* ic_list_black_24dp.png in Resources */ = {isa = PBXBuildFile; fileRef = 57AE37A31A831808003309E1 /* ic_list_black_24dp.png */; };
 		57B6F7E31A6749B300148AA6 /* Forecast_ShoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B6F7E21A6749B300148AA6 /* Forecast_ShoreViewController.m */; };
 		57B6F7E61A67642F00148AA6 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B6F7E51A67642F00148AA6 /* Reachability.m */; };
 		57B6F7E81A6766AC00148AA6 /* icons.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 57B6F7E71A6766AC00148AA6 /* icons.bundle */; };
@@ -78,6 +79,7 @@
 		57AD32A11A66140200B52385 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		57AD32A31A66160C00B52385 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		57AD32A41A66160C00B52385 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		57AE37A31A831808003309E1 /* ic_list_black_24dp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_list_black_24dp.png; sourceTree = "<group>"; };
 		57B6F7E11A6749B300148AA6 /* Forecast_ShoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Forecast_ShoreViewController.h; sourceTree = "<group>"; };
 		57B6F7E21A6749B300148AA6 /* Forecast_ShoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Forecast_ShoreViewController.m; sourceTree = "<group>"; };
 		57B6F7E41A67642F00148AA6 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = ../Reachability.h; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 			children = (
 				57AD329E1A66139C00B52385 /* Images.xcassets */,
 				5780BFDA1A7F501400111C78 /* ic_save_black_24dp.png */,
+				57AE37A31A831808003309E1 /* ic_list_black_24dp.png */,
 				57B6F7E71A6766AC00148AA6 /* icons.bundle */,
 			);
 			name = icons;
@@ -308,6 +311,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57AE37A41A831808003309E1 /* ic_list_black_24dp.png in Resources */,
 				5780BFDB1A7F501400111C78 /* ic_save_black_24dp.png in Resources */,
 				57B6F7E81A6766AC00148AA6 /* icons.bundle in Resources */,
 				57AD32891A660B5D00B52385 /* LaunchScreen.xib in Resources */,
