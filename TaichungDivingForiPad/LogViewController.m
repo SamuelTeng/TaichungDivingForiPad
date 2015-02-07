@@ -123,7 +123,7 @@
 
 -(void)viewDidDisappear:(BOOL)animated
 {
-    
+    /*didn't get called in split view MVC*/
     [super viewDidDisappear:animated];
     NSLog(@"view did disapper");
     [scrollView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];

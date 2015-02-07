@@ -133,6 +133,7 @@
     
     self.navigationController.navigationItem.hidesBackButton = YES;
     
+    
 }
 
 - (void)viewDidLoad {
@@ -143,18 +144,27 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    //delegate.splitviewcontroller.presentsWithGesture = NO;
     [self lodeLog];
 }
 
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    
+    NSLog(@"view did appear");
+    delegate.splitviewcontroller.presentsWithGesture = NO;
     if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
         self.navigationController.interactivePopGestureRecognizer.enabled = NO;
         self.navigationController.interactivePopGestureRecognizer.delegate = nil;
     }
     
+}
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    delegate.splitviewcontroller.presentsWithGesture = YES;
+    NSLog(@"view will disappear");
 }
 
 -(void)viewDidDisappear:(BOOL)animated
@@ -175,6 +185,7 @@
     helium = nil;
     lowppo2 = nil;
     highppo2 = nil;
+    NSLog(@"view did disappear");
     
 }
 
