@@ -58,7 +58,7 @@
     [self fetchData];
     
     if (! resultController.fetchedObjects.count) {
-        UIAlertView *noLog = [[UIAlertView alloc] initWithTitle:@"無日誌記錄" message:@"沒有日誌記錄，請選擇邊欄任一類別日誌新增一筆日誌或\"取消\"回到主頁面" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:nil, nil];
+        UIAlertView *noLog = [[UIAlertView alloc] initWithTitle:@"無日誌記錄" message:@"沒有日誌記錄，請選擇邊欄任一類別日誌新增一筆或\"取消\"回到主頁面" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:nil, nil];
         [noLog show];
     }
 

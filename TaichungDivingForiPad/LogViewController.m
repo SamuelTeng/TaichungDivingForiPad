@@ -112,6 +112,26 @@
     
 }
 
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    NSLog(@"view will disapper");
+    saved = YES;
+    scrollView.backgroundColor = [UIColor whiteColor];
+    [scrollView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+}
+
+-(void)viewDidDisappear:(BOOL)animated
+{
+    
+    [super viewDidDisappear:animated];
+    NSLog(@"view did disapper");
+    [scrollView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    self.navigationItem.rightBarButtonItem.enabled = NO;
+    
+    
+}
+
 - (void)alertView:(UIAlertView *)alertView
 clickedButtonAtIndex:(NSInteger)buttonIndex
 {
@@ -2122,13 +2142,7 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
     
 }
 
--(void)viewDidDisappear:(BOOL)animated
-{
-    
-    [super viewDidDisappear:animated];
-    [scrollView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
-    
-}
+
 
 -(BOOL)shouldAutorotate
 {
