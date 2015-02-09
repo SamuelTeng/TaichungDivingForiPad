@@ -1493,12 +1493,12 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
 
 -(void)textAndLabel
 {
-    dateLabel = [[UILabel alloc] initWithFrame:CGRectMake(70, 88, 80, 21)];
+    dateLabel = [[UILabel alloc] initWithFrame:CGRectMake(125, 88, 80, 21)];
     dateLabel.backgroundColor = [UIColor clearColor];
     [dateLabel setText:@"日期"];
     [scrollView addSubview:dateLabel];
     
-    dateField = [[UITextField alloc] initWithFrame:CGRectMake(130, 85, 150, 30)];
+    dateField = [[UITextField alloc] initWithFrame:CGRectMake(70, 124, 150, 30)];
     dateField.backgroundColor = [UIColor clearColor];
     [dateField setTag:101];
     dateField.delegate = self;
@@ -1507,12 +1507,12 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
     dateField.adjustsFontSizeToFitWidth = YES;
     [scrollView addSubview:dateField];
     
-    siteLabel = [[UILabel alloc] initWithFrame:CGRectMake(70, 154, 80, 21)];
+    siteLabel = [[UILabel alloc] initWithFrame:CGRectMake(270, 88, 80, 21)];
     siteLabel.backgroundColor = [UIColor clearColor];
     [siteLabel setText:@"潛點"];
     [scrollView addSubview:siteLabel];
     
-    siteField = [[UITextField alloc] initWithFrame:CGRectMake(130, 151, 97, 30)];
+    siteField = [[UITextField alloc] initWithFrame:CGRectMake(240, 124, 97, 30)];
     siteField.backgroundColor = [UIColor clearColor];
     [siteField setTag:102];
     siteField.delegate = self;
@@ -1528,12 +1528,12 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
      [siteButton addTarget:self action:@selector(locateSite) forControlEvents:UIControlEventTouchUpInside];
      [scrollView addSubview:siteButton];
      */
-    wavesLabel = [[UILabel alloc] initWithFrame:CGRectMake(70, 220, 100, 21)];
+    wavesLabel = [[UILabel alloc] initWithFrame:CGRectMake(385, 220, 100, 21)];
     wavesLabel.backgroundColor = [UIColor clearColor];
     [wavesLabel setText:@"浪況"];
     [scrollView addSubview:wavesLabel];
     
-    wavesField = [[UITextField alloc] initWithFrame:CGRectMake(130, 217, 97, 30)];
+    wavesField = [[UITextField alloc] initWithFrame:CGRectMake(357, 246, 97, 30)];
     wavesField.backgroundColor = [UIColor clearColor];
     [wavesField setTag:103];
     wavesField.delegate = self;
@@ -1542,12 +1542,12 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
     wavesField.textAlignment = NSTextAlignmentCenter;
     [scrollView addSubview:wavesField];
     
-    currentLabel = [[UILabel alloc] initWithFrame:CGRectMake(70, 286, 100, 21)];
+    currentLabel = [[UILabel alloc] initWithFrame:CGRectMake(270, 220, 100, 21)];
     currentLabel.backgroundColor = [UIColor clearColor];
     [currentLabel setText:@"海流"];
     [scrollView addSubview:currentLabel];
     
-    currentField = [[UITextField alloc] initWithFrame:CGRectMake(130, 283, 97, 30)];
+    currentField = [[UITextField alloc] initWithFrame:CGRectMake(240, 246, 97, 30)];
     currentField.backgroundColor = [UIColor clearColor];
     [currentField setTag:104];
     currentField.delegate = self;
@@ -1556,12 +1556,12 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
     currentField.textAlignment = NSTextAlignmentCenter;
     [scrollView addSubview:currentField];
     
-    gasLabel = [[UILabel alloc] initWithFrame:CGRectMake(70, 352, 100, 21)];
+    gasLabel = [[UILabel alloc] initWithFrame:CGRectMake(385, 88, 100, 21)];
     gasLabel.backgroundColor = [UIColor clearColor];
     [gasLabel setText:@"氣源"];
     [scrollView addSubview:gasLabel];
     
-    gasField = [[UITextField alloc] initWithFrame:CGRectMake(130, 349, 97, 30)];
+    gasField = [[UITextField alloc] initWithFrame:CGRectMake(357, 124, 97, 30)];
     [gasField setTag:105];
     [gasField setText:@"一般空氣"];
     gasField.delegate = self;
@@ -1571,12 +1571,12 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
     gasField.adjustsFontSizeToFitWidth = YES;
     [scrollView addSubview:gasField];
     
-    staPrelabel = [[UILabel alloc] initWithFrame:CGRectMake(30, 428, 200, 21)];
+    staPrelabel = [[UILabel alloc] initWithFrame:CGRectMake(115, 326, 200, 21)];
     staPrelabel.backgroundColor = [UIColor clearColor];
     [staPrelabel setText:@"起始殘壓"];
     [scrollView addSubview:staPrelabel];
     
-    staPreField = [[UITextField alloc] initWithFrame:CGRectMake(130, 425, 97, 30)];
+    staPreField = [[UITextField alloc] initWithFrame:CGRectMake(97, 356, 97, 30)];
     staPreField.backgroundColor = [UIColor clearColor];
     [staPreField setTag:106];
     staPreField.delegate = self;
@@ -1586,12 +1586,12 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
     staPreField.textAlignment = NSTextAlignmentCenter;
     [scrollView addSubview:staPreField];
     
-    _endPreLabel = [[UILabel alloc] initWithFrame:CGRectMake(30, 494, 200, 21)];
+    _endPreLabel = [[UILabel alloc] initWithFrame:CGRectMake(225, 326, 200, 21)];
     _endPreLabel.backgroundColor = [UIColor clearColor];
     [_endPreLabel setText:@"結束殘壓"];
     [scrollView addSubview:_endPreLabel];
     
-    _endPreField = [[UITextField alloc] initWithFrame:CGRectMake(130, 491, 97, 30)];
+    _endPreField = [[UITextField alloc] initWithFrame:CGRectMake(213, 356, 97, 30)];
     _endPreField.backgroundColor = [UIColor clearColor];
     [_endPreField setTag:107];
     _endPreField.delegate = self;
@@ -1602,12 +1602,12 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
     [scrollView addSubview:_endPreField];
     
     
-    maxDepLabel = [[UILabel alloc] initWithFrame:CGRectMake(30, 560, 100, 21)];
+    maxDepLabel = [[UILabel alloc] initWithFrame:CGRectMake(345, 326, 100, 21)];
     maxDepLabel.backgroundColor = [UIColor clearColor];
     [maxDepLabel setText:@"最大深度"];
     [scrollView addSubview:maxDepLabel];
     
-    maxDepField = [[UITextField alloc] initWithFrame:CGRectMake(130, 557, 97, 30)];
+    maxDepField = [[UITextField alloc] initWithFrame:CGRectMake(330, 356, 97, 30)];
     maxDepField.backgroundColor = [UIColor clearColor];
     [maxDepField setTag:108];
     maxDepField.delegate = self;
@@ -1617,12 +1617,12 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
     maxDepField.textAlignment = NSTextAlignmentCenter;
     [scrollView addSubview:maxDepField];
     
-    divetimeLabel = [[UILabel alloc] initWithFrame:CGRectMake(30, 626, 100, 21)];
+    divetimeLabel = [[UILabel alloc] initWithFrame:CGRectMake(465, 326, 100, 21)];
     divetimeLabel.backgroundColor = [UIColor clearColor];
     [divetimeLabel setText:@"潛水時間"];
     [scrollView addSubview:divetimeLabel];
     
-    divetimeField = [[UITextField alloc] initWithFrame:CGRectMake(130, 623, 97, 30)];
+    divetimeField = [[UITextField alloc] initWithFrame:CGRectMake(450, 356, 97, 30)];
     divetimeField.backgroundColor = [UIColor clearColor];
     [divetimeField setTag:111];
     divetimeField.delegate = self;
@@ -1632,12 +1632,12 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
     divetimeField.textAlignment = NSTextAlignmentCenter;
     [scrollView addSubview:divetimeField];
     
-    temperLabel = [[UILabel alloc] initWithFrame:CGRectMake(70, 692, 100, 21)];
+    temperLabel = [[UILabel alloc] initWithFrame:CGRectMake(125, 220, 100, 21)];
     temperLabel.backgroundColor = [UIColor clearColor];
     [temperLabel setText:@"水溫"];
     [scrollView addSubview:temperLabel];
     
-    temperField = [[UITextField alloc] initWithFrame:CGRectMake(130, 689, 97, 30)];
+    temperField = [[UITextField alloc] initWithFrame:CGRectMake(97, 246, 97, 30)];
     temperField.backgroundColor = [UIColor clearColor];
     [temperField setTag:109];
     temperField.delegate = self;
@@ -1647,12 +1647,12 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
     temperField.adjustsFontSizeToFitWidth = YES;
     [scrollView addSubview:temperField];
     
-    visiLabel = [[UILabel alloc] initWithFrame:CGRectMake(60, 758, 100, 21)];
+    visiLabel = [[UILabel alloc] initWithFrame:CGRectMake(497, 220, 100, 21)];
     visiLabel.backgroundColor = [UIColor clearColor];
     [visiLabel setText:@"能見度"];
     [scrollView addSubview:visiLabel];
     
-    visiField = [[UITextField alloc] initWithFrame:CGRectMake(130, 755, 97, 30)];
+    visiField = [[UITextField alloc] initWithFrame:CGRectMake(477, 246, 97, 30)];
     visiField.backgroundColor = [UIColor clearColor];
     [visiField setTag:110];
     visiField.delegate = self;
