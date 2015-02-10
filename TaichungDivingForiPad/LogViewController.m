@@ -1669,12 +1669,12 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
 
 -(void)nitroxTextAndLabel
 {
-    dateLabel = [[UILabel alloc] initWithFrame:CGRectMake(70, 88, 80, 21)];
+    dateLabel = [[UILabel alloc] initWithFrame:CGRectMake(125, 88, 80, 21)];
     dateLabel.backgroundColor = [UIColor clearColor];
     [dateLabel setText:@"日期"];
     [scrollView addSubview:dateLabel];
     
-    dateField = [[UITextField alloc] initWithFrame:CGRectMake(130, 85, 150, 30)];
+    dateField = [[UITextField alloc] initWithFrame:CGRectMake(70, 124, 150, 30)];
     dateField.backgroundColor = [UIColor clearColor];
     [dateField setTag:101];
     dateField.delegate = self;
@@ -1683,233 +1683,18 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
     dateField.adjustsFontSizeToFitWidth = YES;
     [scrollView addSubview:dateField];
     
-    siteLabel = [[UILabel alloc] initWithFrame:CGRectMake(70, 154, 80, 21)];
+    siteLabel = [[UILabel alloc] initWithFrame:CGRectMake(270, 88, 80, 21)];
     siteLabel.backgroundColor = [UIColor clearColor];
     [siteLabel setText:@"潛點"];
     [scrollView addSubview:siteLabel];
     
-    siteField = [[UITextField alloc] initWithFrame:CGRectMake(130, 151, 97, 30)];
+    siteField = [[UITextField alloc] initWithFrame:CGRectMake(240, 124, 97, 30)];
     siteField.backgroundColor = [UIColor clearColor];
     [siteField setTag:102];
     siteField.delegate = self;
     siteField.placeholder = @"Site Name";
     siteField.borderStyle = UITextBorderStyleRoundedRect;
     //siteField.textAlignment = NSTextAlignmentCenter;
-    siteField.adjustsFontSizeToFitWidth = YES;
-    [scrollView addSubview:siteField];    /*
-                                           siteButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-                                           [siteButton setTitle:@"Auto" forState:UIControlStateNormal];
-                                           [siteButton setFrame:CGRectMake(210, 124, 80, 80)];
-                                           [siteButton addTarget:self action:@selector(locateSite) forControlEvents:UIControlEventTouchUpInside];
-                                           [scrollView addSubview:siteButton];
-                                           */
-    wavesLabel = [[UILabel alloc] initWithFrame:CGRectMake(70, 220, 100, 21)];
-    wavesLabel.backgroundColor = [UIColor clearColor];
-    [wavesLabel setText:@"浪況"];
-    [scrollView addSubview:wavesLabel];
-    
-    wavesField = [[UITextField alloc] initWithFrame:CGRectMake(130, 217, 97, 30)];
-    wavesField.backgroundColor = [UIColor clearColor];
-    [wavesField setTag:103];
-    wavesField.delegate = self;
-    //wavesField.placeholder = @"25.061033";
-    wavesField.borderStyle = UITextBorderStyleRoundedRect;
-    wavesField.textAlignment = NSTextAlignmentCenter;
-    [scrollView addSubview:wavesField];
-    
-    currentLabel = [[UILabel alloc] initWithFrame:CGRectMake(70, 286, 100, 21)];
-    currentLabel.backgroundColor = [UIColor clearColor];
-    [currentLabel setText:@"海流"];
-    [scrollView addSubview:currentLabel];
-    
-    currentField = [[UITextField alloc] initWithFrame:CGRectMake(130, 283, 97, 30)];
-    currentField.backgroundColor = [UIColor clearColor];
-    [currentField setTag:104];
-    currentField.delegate = self;
-    //currentField.placeholder = @"121.646056";
-    currentField.borderStyle = UITextBorderStyleRoundedRect;
-    currentField.textAlignment = NSTextAlignmentCenter;
-    [scrollView addSubview:currentField];
-    
-    gasLabel = [[UILabel alloc] initWithFrame:CGRectMake(70, 352, 100, 21)];
-    gasLabel.backgroundColor = [UIColor clearColor];
-    [gasLabel setText:@"氣源"];
-    [scrollView addSubview:gasLabel];
-    
-    gasField = [[UITextField alloc] initWithFrame:CGRectMake(130, 349, 97, 30)];
-    [gasField setTag:105];
-    [gasField setText:@"高氧"];
-    gasField.delegate = self;
-    //gasField.placeholder = @"氣源";
-    gasField.borderStyle = UITextBorderStyleRoundedRect;
-    gasField.textAlignment = NSTextAlignmentCenter;
-    gasField.adjustsFontSizeToFitWidth = YES;
-    [scrollView addSubview:gasField];
-    
-    staPrelabel = [[UILabel alloc] initWithFrame:CGRectMake(30, 428, 200, 21)];
-    staPrelabel.backgroundColor = [UIColor clearColor];
-    [staPrelabel setText:@"起始殘壓"];
-    [scrollView addSubview:staPrelabel];
-    
-    staPreField = [[UITextField alloc] initWithFrame:CGRectMake(130, 425, 97, 30)];
-    staPreField.backgroundColor = [UIColor clearColor];
-    [staPreField setTag:106];
-    staPreField.delegate = self;
-    staPreField.placeholder = @"200 bar";
-    staPreField.borderStyle = UITextBorderStyleRoundedRect;
-    staPreField.adjustsFontSizeToFitWidth = YES;
-    staPreField.textAlignment = NSTextAlignmentCenter;
-    [scrollView addSubview:staPreField];
-    
-    _endPreLabel = [[UILabel alloc] initWithFrame:CGRectMake(30, 494, 200, 21)];
-    _endPreLabel.backgroundColor = [UIColor clearColor];
-    [_endPreLabel setText:@"結束殘壓"];
-    [scrollView addSubview:_endPreLabel];
-    
-    _endPreField = [[UITextField alloc] initWithFrame:CGRectMake(130, 491, 97, 30)];
-    _endPreField.backgroundColor = [UIColor clearColor];
-    [_endPreField setTag:107];
-    _endPreField.delegate = self;
-    _endPreField.placeholder = @"60 bar";
-    _endPreField.borderStyle = UITextBorderStyleRoundedRect;
-    _endPreField.adjustsFontSizeToFitWidth = YES;
-    _endPreField.textAlignment = NSTextAlignmentCenter;
-    [scrollView addSubview:_endPreField];
-    
-    mixtureLabel = [[UILabel alloc] initWithFrame:CGRectMake(30, 560, 100, 21)];
-    mixtureLabel.backgroundColor = [UIColor clearColor];
-    [mixtureLabel setText:@"混合濃度"];
-    [scrollView addSubview:mixtureLabel];
-    
-    mixtureField = [[UITextField alloc] initWithFrame:CGRectMake(130, 557, 97, 30)];
-    mixtureField.backgroundColor = [UIColor clearColor];
-    [mixtureField setTag:112];
-    mixtureField.delegate = self;
-    mixtureField.borderStyle = UITextBorderStyleRoundedRect;
-    mixtureField.adjustsFontSizeToFitWidth = YES;
-    mixtureField.textAlignment = NSTextAlignmentCenter;
-    [scrollView addSubview:mixtureField];
-    
-    oxygenLabel = [[UILabel alloc] initWithFrame:CGRectMake(70, 626, 100, 21)];
-    oxygenLabel.backgroundColor = [UIColor clearColor];
-    [oxygenLabel setText:@"氧氣"];
-    [scrollView addSubview:oxygenLabel];
-    
-    oxygenField = [[UITextField alloc] initWithFrame:CGRectMake(130, 623, 97, 30)];
-    oxygenField.backgroundColor = [UIColor clearColor];
-    [oxygenField setTag:113];
-    oxygenField.delegate = self;
-    oxygenField.placeholder = @"%";
-    oxygenField.borderStyle = UITextBorderStyleRoundedRect;
-    oxygenField.adjustsFontSizeToFitWidth = YES;
-    oxygenField.textAlignment = NSTextAlignmentCenter;
-    [scrollView addSubview:oxygenField];
-    
-    nitrogenLabel = [[UILabel alloc] initWithFrame:CGRectMake(70, 692, 100, 21)];
-    nitrogenLabel.backgroundColor = [UIColor clearColor];
-    [nitrogenLabel setText:@"氮氣"];
-    [scrollView addSubview:nitrogenLabel];
-    
-    nitrogenField = [[UITextField alloc] initWithFrame:CGRectMake(130, 689, 97, 30)];
-    nitrogenField.backgroundColor = [UIColor clearColor];
-    [nitrogenField setTag:114];
-    nitrogenField.delegate = self;
-    nitrogenField.placeholder = @"%";
-    nitrogenField.borderStyle = UITextBorderStyleRoundedRect;
-    nitrogenField.textAlignment = NSTextAlignmentCenter;
-    nitrogenField.adjustsFontSizeToFitWidth = YES;
-    [scrollView addSubview:nitrogenField];
-    
-    maxDepLabel = [[UILabel alloc] initWithFrame:CGRectMake(30, 758, 100, 21)];
-    maxDepLabel.backgroundColor = [UIColor clearColor];
-    [maxDepLabel setText:@"最大深度"];
-    [scrollView addSubview:maxDepLabel];
-    
-    maxDepField = [[UITextField alloc] initWithFrame:CGRectMake(130, 755, 97, 30)];
-    maxDepField.backgroundColor = [UIColor clearColor];
-    [maxDepField setTag:108];
-    maxDepField.delegate = self;
-    maxDepField.placeholder = @"40 M";
-    maxDepField.borderStyle = UITextBorderStyleRoundedRect;
-    maxDepField.adjustsFontSizeToFitWidth = YES;
-    maxDepField.textAlignment = NSTextAlignmentCenter;
-    [scrollView addSubview:maxDepField];
-    
-    divetimeLabel = [[UILabel alloc] initWithFrame:CGRectMake(30, 824, 100, 21)];
-    divetimeLabel.backgroundColor = [UIColor clearColor];
-    [divetimeLabel setText:@"潛水時間"];
-    [scrollView addSubview:divetimeLabel];
-    
-    divetimeField = [[UITextField alloc] initWithFrame:CGRectMake(130, 821, 97, 30)];
-    divetimeField.backgroundColor = [UIColor clearColor];
-    [divetimeField setTag:111];
-    divetimeField.delegate = self;
-    divetimeField.placeholder = @"in minutes";
-    divetimeField.borderStyle = UITextBorderStyleRoundedRect;
-    divetimeField.adjustsFontSizeToFitWidth = YES;
-    divetimeField.textAlignment = NSTextAlignmentCenter;
-    [scrollView addSubview:divetimeField];
-    
-    temperLabel = [[UILabel alloc] initWithFrame:CGRectMake(70, 890, 100, 21)];
-    temperLabel.backgroundColor = [UIColor clearColor];
-    [temperLabel setText:@"水溫"];
-    [scrollView addSubview:temperLabel];
-    
-    temperField = [[UITextField alloc] initWithFrame:CGRectMake(130, 887, 97, 30)];
-    temperField.backgroundColor = [UIColor clearColor];
-    [temperField setTag:109];
-    temperField.delegate = self;
-    temperField.placeholder = @"";
-    temperField.borderStyle = UITextBorderStyleRoundedRect;
-    temperField.textAlignment = NSTextAlignmentCenter;
-    temperField.adjustsFontSizeToFitWidth = YES;
-    [scrollView addSubview:temperField];
-    
-    visiLabel = [[UILabel alloc] initWithFrame:CGRectMake(60, 956, 100, 21)];
-    visiLabel.backgroundColor = [UIColor clearColor];
-    [visiLabel setText:@"能見度"];
-    [scrollView addSubview:visiLabel];
-    
-    visiField = [[UITextField alloc] initWithFrame:CGRectMake(130, 953, 97, 30)];
-    visiField.backgroundColor = [UIColor clearColor];
-    [visiField setTag:110];
-    visiField.delegate = self;
-    visiField.placeholder = @"15M";
-    visiField.borderStyle = UITextBorderStyleRoundedRect;
-    visiField.textAlignment = NSTextAlignmentCenter;
-    visiField.adjustsFontSizeToFitWidth = YES;
-    [scrollView addSubview:visiField];
-    
-}
-
--(void)closedCircuitTextAndLabel
-{
-    dateLabel = [[UILabel alloc] initWithFrame:CGRectMake(70, 88, 80, 21)];
-    dateLabel.backgroundColor = [UIColor clearColor];
-    [dateLabel setText:@"日期"];
-    [scrollView addSubview:dateLabel];
-    
-    dateField = [[UITextField alloc] initWithFrame:CGRectMake(130, 85, 150, 30)];
-    dateField.backgroundColor = [UIColor clearColor];
-    [dateField setTag:101];
-    dateField.delegate = self;
-    dateField.placeholder = @"YYYY-mm-dd";
-    dateField.borderStyle = UITextBorderStyleRoundedRect;
-    dateField.adjustsFontSizeToFitWidth = YES;
-    [scrollView addSubview:dateField];
-    
-    siteLabel = [[UILabel alloc] initWithFrame:CGRectMake(70, 154, 80, 21)];
-    siteLabel.backgroundColor = [UIColor clearColor];
-    [siteLabel setText:@"潛點"];
-    [scrollView addSubview:siteLabel];
-    
-    siteField = [[UITextField alloc] initWithFrame:CGRectMake(130, 151, 97, 30)];
-    siteField.backgroundColor = [UIColor clearColor];
-    [siteField setTag:102];
-    siteField.delegate = self;
-    siteField.placeholder = @"Site Name";
-    siteField.borderStyle = UITextBorderStyleRoundedRect;
-    siteField.textAlignment = NSTextAlignmentCenter;
     siteField.adjustsFontSizeToFitWidth = YES;
     [scrollView addSubview:siteField];
     /*
@@ -1919,12 +1704,12 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
      [siteButton addTarget:self action:@selector(locateSite) forControlEvents:UIControlEventTouchUpInside];
      [scrollView addSubview:siteButton];
      */
-    wavesLabel = [[UILabel alloc] initWithFrame:CGRectMake(70, 220, 100, 21)];
+    wavesLabel = [[UILabel alloc] initWithFrame:CGRectMake(385, 220, 100, 21)];
     wavesLabel.backgroundColor = [UIColor clearColor];
     [wavesLabel setText:@"浪況"];
     [scrollView addSubview:wavesLabel];
     
-    wavesField = [[UITextField alloc] initWithFrame:CGRectMake(130, 217, 97, 30)];
+    wavesField = [[UITextField alloc] initWithFrame:CGRectMake(357, 246, 97, 30)];
     wavesField.backgroundColor = [UIColor clearColor];
     [wavesField setTag:103];
     wavesField.delegate = self;
@@ -1933,12 +1718,12 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
     wavesField.textAlignment = NSTextAlignmentCenter;
     [scrollView addSubview:wavesField];
     
-    currentLabel = [[UILabel alloc] initWithFrame:CGRectMake(70, 286, 100, 21)];
+    currentLabel = [[UILabel alloc] initWithFrame:CGRectMake(270, 220, 100, 21)];
     currentLabel.backgroundColor = [UIColor clearColor];
-    [currentLabel setText:@"水流"];
+    [currentLabel setText:@"海流"];
     [scrollView addSubview:currentLabel];
     
-    currentField = [[UITextField alloc] initWithFrame:CGRectMake(130, 283, 97, 30)];
+    currentField = [[UITextField alloc] initWithFrame:CGRectMake(240, 246, 97, 30)];
     currentField.backgroundColor = [UIColor clearColor];
     [currentField setTag:104];
     currentField.delegate = self;
@@ -1947,14 +1732,14 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
     currentField.textAlignment = NSTextAlignmentCenter;
     [scrollView addSubview:currentField];
     
-    gasLabel = [[UILabel alloc] initWithFrame:CGRectMake(70, 352, 100, 21)];
+    gasLabel = [[UILabel alloc] initWithFrame:CGRectMake(385, 88, 100, 21)];
     gasLabel.backgroundColor = [UIColor clearColor];
     [gasLabel setText:@"氣源"];
     [scrollView addSubview:gasLabel];
     
-    gasField = [[UITextField alloc] initWithFrame:CGRectMake(130, 349, 97, 30)];
+    gasField = [[UITextField alloc] initWithFrame:CGRectMake(357, 124, 97, 30)];
     [gasField setTag:105];
-    [gasField setText:@"循環水肺"] ;
+    [gasField setText:@"高氧"];
     gasField.delegate = self;
     //gasField.placeholder = @"氣源";
     gasField.borderStyle = UITextBorderStyleRoundedRect;
@@ -1962,12 +1747,12 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
     gasField.adjustsFontSizeToFitWidth = YES;
     [scrollView addSubview:gasField];
     
-    staPrelabel = [[UILabel alloc] initWithFrame:CGRectMake(30, 428, 200, 21)];
+    staPrelabel = [[UILabel alloc] initWithFrame:CGRectMake(115, 326, 200, 21)];
     staPrelabel.backgroundColor = [UIColor clearColor];
     [staPrelabel setText:@"起始殘壓"];
     [scrollView addSubview:staPrelabel];
     
-    staPreField = [[UITextField alloc] initWithFrame:CGRectMake(130, 425, 97, 30)];
+    staPreField = [[UITextField alloc] initWithFrame:CGRectMake(97, 356, 97, 30)];
     staPreField.backgroundColor = [UIColor clearColor];
     [staPreField setTag:106];
     staPreField.delegate = self;
@@ -1977,12 +1762,12 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
     staPreField.textAlignment = NSTextAlignmentCenter;
     [scrollView addSubview:staPreField];
     
-    _endPreLabel = [[UILabel alloc] initWithFrame:CGRectMake(30, 494, 200, 21)];
+    _endPreLabel = [[UILabel alloc] initWithFrame:CGRectMake(225, 326, 200, 21)];
     _endPreLabel.backgroundColor = [UIColor clearColor];
     [_endPreLabel setText:@"結束殘壓"];
     [scrollView addSubview:_endPreLabel];
     
-    _endPreField = [[UITextField alloc] initWithFrame:CGRectMake(130, 491, 97, 30)];
+    _endPreField = [[UITextField alloc] initWithFrame:CGRectMake(213, 356, 97, 30)];
     _endPreField.backgroundColor = [UIColor clearColor];
     [_endPreField setTag:107];
     _endPreField.delegate = self;
@@ -1992,100 +1777,13 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
     _endPreField.textAlignment = NSTextAlignmentCenter;
     [scrollView addSubview:_endPreField];
     
-    mixtureLabel = [[UILabel alloc] initWithFrame:CGRectMake(30, 560, 100, 21)];
-    mixtureLabel.backgroundColor = [UIColor clearColor];
-    [mixtureLabel setText:@"混合濃度"];
-    [scrollView addSubview:mixtureLabel];
     
-    mixtureField = [[UITextField alloc] initWithFrame:CGRectMake(130, 557, 97, 30)];
-    mixtureField.backgroundColor = [UIColor clearColor];
-    [mixtureField setTag:112];
-    mixtureField.delegate = self;
-    mixtureField.borderStyle = UITextBorderStyleRoundedRect;
-    mixtureField.adjustsFontSizeToFitWidth = YES;
-    mixtureField.textAlignment = NSTextAlignmentCenter;
-    [scrollView addSubview:mixtureField];
-    
-    oxygenLabel = [[UILabel alloc] initWithFrame:CGRectMake(70, 626, 100, 21)];
-    oxygenLabel.backgroundColor = [UIColor clearColor];
-    [oxygenLabel setText:@"氧氣"];
-    [scrollView addSubview:oxygenLabel];
-    
-    oxygenField = [[UITextField alloc] initWithFrame:CGRectMake(130, 623, 97, 30)];
-    oxygenField.backgroundColor = [UIColor clearColor];
-    [oxygenField setTag:113];
-    oxygenField.delegate = self;
-    oxygenField.placeholder = @"%";
-    oxygenField.borderStyle = UITextBorderStyleRoundedRect;
-    oxygenField.adjustsFontSizeToFitWidth = YES;
-    oxygenField.textAlignment = NSTextAlignmentCenter;
-    [scrollView addSubview:oxygenField];
-    
-    nitrogenLabel = [[UILabel alloc] initWithFrame:CGRectMake(70, 692, 100, 21)];
-    nitrogenLabel.backgroundColor = [UIColor clearColor];
-    [nitrogenLabel setText:@"氮氣"];
-    [scrollView addSubview:nitrogenLabel];
-    
-    nitrogenField = [[UITextField alloc] initWithFrame:CGRectMake(130, 689, 97, 30)];
-    nitrogenField.backgroundColor = [UIColor clearColor];
-    [nitrogenField setTag:114];
-    nitrogenField.delegate = self;
-    nitrogenField.placeholder = @"%";
-    nitrogenField.borderStyle = UITextBorderStyleRoundedRect;
-    nitrogenField.textAlignment = NSTextAlignmentCenter;
-    nitrogenField.adjustsFontSizeToFitWidth = YES;
-    [scrollView addSubview:nitrogenField];
-    
-    heliumLabel = [[UILabel alloc] initWithFrame:CGRectMake(70, 758, 100, 21)];
-    heliumLabel.backgroundColor = [UIColor clearColor];
-    [heliumLabel setText:@"氦氣"];
-    [scrollView addSubview:heliumLabel];
-    
-    heliumField = [[UITextField alloc] initWithFrame:CGRectMake(130, 755, 97, 30)];
-    heliumField.backgroundColor = [UIColor clearColor];
-    [heliumField setTag:115];
-    heliumField.delegate = self;
-    heliumField.borderStyle = UITextBorderStyleRoundedRect;
-    heliumField.adjustsFontSizeToFitWidth = YES;
-    heliumField.textAlignment = NSTextAlignmentCenter;
-    [scrollView addSubview:heliumField];
-    
-    
-    lowppo2Label = [[UILabel alloc] initWithFrame:CGRectMake(30, 824, 100, 21)];
-    lowppo2Label.backgroundColor = [UIColor clearColor];
-    [lowppo2Label setText:@"低ppO2"];
-    [scrollView addSubview:lowppo2Label];
-    
-    lowppo2Field = [[UITextField alloc] initWithFrame:CGRectMake(130, 821, 97, 30)];
-    lowppo2Field.backgroundColor = [UIColor clearColor];
-    [lowppo2Field setTag:116];
-    lowppo2Field.delegate = self;
-    lowppo2Field.borderStyle = UITextBorderStyleRoundedRect;
-    lowppo2Field.adjustsFontSizeToFitWidth = YES;
-    lowppo2Field.textAlignment = NSTextAlignmentCenter;
-    [scrollView addSubview:lowppo2Field];
-    
-    highppo2Label = [[UILabel alloc] initWithFrame:CGRectMake(30, 890, 100, 21)];
-    highppo2Label.backgroundColor = [UIColor clearColor];
-    [highppo2Label setText:@"高ppO2"];
-    [scrollView addSubview:highppo2Label];
-    
-    highppo2Field = [[UITextField alloc] initWithFrame:CGRectMake(130, 887, 97, 30)];
-    highppo2Field.backgroundColor = [UIColor clearColor];
-    [highppo2Field setTag:117];
-    highppo2Field.delegate = self;
-    highppo2Field.placeholder = @"";
-    highppo2Field.borderStyle = UITextBorderStyleRoundedRect;
-    highppo2Field.textAlignment = NSTextAlignmentCenter;
-    highppo2Field.adjustsFontSizeToFitWidth = YES;
-    [scrollView addSubview:highppo2Field];
-    
-    maxDepLabel = [[UILabel alloc] initWithFrame:CGRectMake(30, 956, 100, 21)];
+    maxDepLabel = [[UILabel alloc] initWithFrame:CGRectMake(345, 326, 100, 21)];
     maxDepLabel.backgroundColor = [UIColor clearColor];
     [maxDepLabel setText:@"最大深度"];
     [scrollView addSubview:maxDepLabel];
     
-    maxDepField = [[UITextField alloc] initWithFrame:CGRectMake(130, 953, 97, 30)];
+    maxDepField = [[UITextField alloc] initWithFrame:CGRectMake(330, 356, 97, 30)];
     maxDepField.backgroundColor = [UIColor clearColor];
     [maxDepField setTag:108];
     maxDepField.delegate = self;
@@ -2095,12 +1793,12 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
     maxDepField.textAlignment = NSTextAlignmentCenter;
     [scrollView addSubview:maxDepField];
     
-    divetimeLabel = [[UILabel alloc] initWithFrame:CGRectMake(30, 1022, 100, 21)];
+    divetimeLabel = [[UILabel alloc] initWithFrame:CGRectMake(465, 326, 100, 21)];
     divetimeLabel.backgroundColor = [UIColor clearColor];
     [divetimeLabel setText:@"潛水時間"];
     [scrollView addSubview:divetimeLabel];
     
-    divetimeField = [[UITextField alloc] initWithFrame:CGRectMake(130, 1019, 97, 30)];
+    divetimeField = [[UITextField alloc] initWithFrame:CGRectMake(450, 356, 97, 30)];
     divetimeField.backgroundColor = [UIColor clearColor];
     [divetimeField setTag:111];
     divetimeField.delegate = self;
@@ -2110,12 +1808,12 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
     divetimeField.textAlignment = NSTextAlignmentCenter;
     [scrollView addSubview:divetimeField];
     
-    temperLabel = [[UILabel alloc] initWithFrame:CGRectMake(70, 1088, 100, 21)];
+    temperLabel = [[UILabel alloc] initWithFrame:CGRectMake(125, 220, 100, 21)];
     temperLabel.backgroundColor = [UIColor clearColor];
     [temperLabel setText:@"水溫"];
     [scrollView addSubview:temperLabel];
     
-    temperField = [[UITextField alloc] initWithFrame:CGRectMake(130, 1085, 97, 30)];
+    temperField = [[UITextField alloc] initWithFrame:CGRectMake(97, 246, 97, 30)];
     temperField.backgroundColor = [UIColor clearColor];
     [temperField setTag:109];
     temperField.delegate = self;
@@ -2125,12 +1823,12 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
     temperField.adjustsFontSizeToFitWidth = YES;
     [scrollView addSubview:temperField];
     
-    visiLabel = [[UILabel alloc] initWithFrame:CGRectMake(60, 1154, 100, 21)];
+    visiLabel = [[UILabel alloc] initWithFrame:CGRectMake(497, 220, 100, 21)];
     visiLabel.backgroundColor = [UIColor clearColor];
     [visiLabel setText:@"能見度"];
     [scrollView addSubview:visiLabel];
     
-    visiField = [[UITextField alloc] initWithFrame:CGRectMake(130, 1151, 97, 30)];
+    visiField = [[UITextField alloc] initWithFrame:CGRectMake(477, 246, 97, 30)];
     visiField.backgroundColor = [UIColor clearColor];
     [visiField setTag:110];
     visiField.delegate = self;
@@ -2139,6 +1837,316 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
     visiField.textAlignment = NSTextAlignmentCenter;
     visiField.adjustsFontSizeToFitWidth = YES;
     [scrollView addSubview:visiField];
+    
+    mixtureLabel = [[UILabel alloc] initWithFrame:CGRectMake(480, 88, 100, 21)];
+    mixtureLabel.backgroundColor = [UIColor clearColor];
+    [mixtureLabel setText:@"混合濃度"];
+    [scrollView addSubview:mixtureLabel];
+    
+    mixtureField = [[UITextField alloc] initWithFrame:CGRectMake(480, 124, 97, 30)];
+    mixtureField.backgroundColor = [UIColor clearColor];
+    [mixtureField setTag:112];
+    mixtureField.delegate = self;
+    mixtureField.borderStyle = UITextBorderStyleRoundedRect;
+    mixtureField.adjustsFontSizeToFitWidth = YES;
+    mixtureField.textAlignment = NSTextAlignmentCenter;
+    [scrollView addSubview:mixtureField];
+    
+    oxygenLabel = [[UILabel alloc] initWithFrame:CGRectMake(125, 450, 100, 21)];
+    oxygenLabel.backgroundColor = [UIColor clearColor];
+    [oxygenLabel setText:@"氧氣"];
+    [scrollView addSubview:oxygenLabel];
+    
+    oxygenField = [[UITextField alloc] initWithFrame:CGRectMake(97, 476, 97, 30)];
+    oxygenField.backgroundColor = [UIColor clearColor];
+    [oxygenField setTag:113];
+    oxygenField.delegate = self;
+    oxygenField.placeholder = @"%";
+    oxygenField.borderStyle = UITextBorderStyleRoundedRect;
+    oxygenField.adjustsFontSizeToFitWidth = YES;
+    oxygenField.textAlignment = NSTextAlignmentCenter;
+    [scrollView addSubview:oxygenField];
+    
+    nitrogenLabel = [[UILabel alloc] initWithFrame:CGRectMake(300, 450, 100, 21)];
+    nitrogenLabel.backgroundColor = [UIColor clearColor];
+    [nitrogenLabel setText:@"氮氣"];
+    [scrollView addSubview:nitrogenLabel];
+    
+    nitrogenField = [[UITextField alloc] initWithFrame:CGRectMake(272, 476, 97, 30)];
+    nitrogenField.backgroundColor = [UIColor clearColor];
+    [nitrogenField setTag:114];
+    nitrogenField.delegate = self;
+    nitrogenField.placeholder = @"%";
+    nitrogenField.borderStyle = UITextBorderStyleRoundedRect;
+    nitrogenField.textAlignment = NSTextAlignmentCenter;
+    nitrogenField.adjustsFontSizeToFitWidth = YES;
+    [scrollView addSubview:nitrogenField];
+    
+    
+    
+}
+
+-(void)closedCircuitTextAndLabel
+{
+    dateLabel = [[UILabel alloc] initWithFrame:CGRectMake(125, 88, 80, 21)];
+    dateLabel.backgroundColor = [UIColor clearColor];
+    [dateLabel setText:@"日期"];
+    [scrollView addSubview:dateLabel];
+    
+    dateField = [[UITextField alloc] initWithFrame:CGRectMake(70, 124, 150, 30)];
+    dateField.backgroundColor = [UIColor clearColor];
+    [dateField setTag:101];
+    dateField.delegate = self;
+    dateField.placeholder = @"YYYY-mm-dd HH:mm";
+    dateField.borderStyle = UITextBorderStyleRoundedRect;
+    dateField.adjustsFontSizeToFitWidth = YES;
+    [scrollView addSubview:dateField];
+    
+    siteLabel = [[UILabel alloc] initWithFrame:CGRectMake(270, 88, 80, 21)];
+    siteLabel.backgroundColor = [UIColor clearColor];
+    [siteLabel setText:@"潛點"];
+    [scrollView addSubview:siteLabel];
+    
+    siteField = [[UITextField alloc] initWithFrame:CGRectMake(240, 124, 97, 30)];
+    siteField.backgroundColor = [UIColor clearColor];
+    [siteField setTag:102];
+    siteField.delegate = self;
+    siteField.placeholder = @"Site Name";
+    siteField.borderStyle = UITextBorderStyleRoundedRect;
+    //siteField.textAlignment = NSTextAlignmentCenter;
+    siteField.adjustsFontSizeToFitWidth = YES;
+    [scrollView addSubview:siteField];
+    /*
+     siteButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+     [siteButton setTitle:@"Auto" forState:UIControlStateNormal];
+     [siteButton setFrame:CGRectMake(210, 124, 80, 80)];
+     [siteButton addTarget:self action:@selector(locateSite) forControlEvents:UIControlEventTouchUpInside];
+     [scrollView addSubview:siteButton];
+     */
+    wavesLabel = [[UILabel alloc] initWithFrame:CGRectMake(385, 220, 100, 21)];
+    wavesLabel.backgroundColor = [UIColor clearColor];
+    [wavesLabel setText:@"浪況"];
+    [scrollView addSubview:wavesLabel];
+    
+    wavesField = [[UITextField alloc] initWithFrame:CGRectMake(357, 246, 97, 30)];
+    wavesField.backgroundColor = [UIColor clearColor];
+    [wavesField setTag:103];
+    wavesField.delegate = self;
+    //wavesField.placeholder = @"25.061033";
+    wavesField.borderStyle = UITextBorderStyleRoundedRect;
+    wavesField.textAlignment = NSTextAlignmentCenter;
+    [scrollView addSubview:wavesField];
+    
+    currentLabel = [[UILabel alloc] initWithFrame:CGRectMake(270, 220, 100, 21)];
+    currentLabel.backgroundColor = [UIColor clearColor];
+    [currentLabel setText:@"海流"];
+    [scrollView addSubview:currentLabel];
+    
+    currentField = [[UITextField alloc] initWithFrame:CGRectMake(240, 246, 97, 30)];
+    currentField.backgroundColor = [UIColor clearColor];
+    [currentField setTag:104];
+    currentField.delegate = self;
+    //currentField.placeholder = @"121.646056";
+    currentField.borderStyle = UITextBorderStyleRoundedRect;
+    currentField.textAlignment = NSTextAlignmentCenter;
+    [scrollView addSubview:currentField];
+    
+    gasLabel = [[UILabel alloc] initWithFrame:CGRectMake(385, 88, 100, 21)];
+    gasLabel.backgroundColor = [UIColor clearColor];
+    [gasLabel setText:@"氣源"];
+    [scrollView addSubview:gasLabel];
+    
+    gasField = [[UITextField alloc] initWithFrame:CGRectMake(357, 124, 97, 30)];
+    [gasField setTag:105];
+    [gasField setText:@"循環水肺"];
+    gasField.delegate = self;
+    //gasField.placeholder = @"氣源";
+    gasField.borderStyle = UITextBorderStyleRoundedRect;
+    gasField.textAlignment = NSTextAlignmentCenter;
+    gasField.adjustsFontSizeToFitWidth = YES;
+    [scrollView addSubview:gasField];
+    
+    staPrelabel = [[UILabel alloc] initWithFrame:CGRectMake(115, 326, 200, 21)];
+    staPrelabel.backgroundColor = [UIColor clearColor];
+    [staPrelabel setText:@"起始殘壓"];
+    [scrollView addSubview:staPrelabel];
+    
+    staPreField = [[UITextField alloc] initWithFrame:CGRectMake(97, 356, 97, 30)];
+    staPreField.backgroundColor = [UIColor clearColor];
+    [staPreField setTag:106];
+    staPreField.delegate = self;
+    staPreField.placeholder = @"200 bar";
+    staPreField.borderStyle = UITextBorderStyleRoundedRect;
+    staPreField.adjustsFontSizeToFitWidth = YES;
+    staPreField.textAlignment = NSTextAlignmentCenter;
+    [scrollView addSubview:staPreField];
+    
+    _endPreLabel = [[UILabel alloc] initWithFrame:CGRectMake(225, 326, 200, 21)];
+    _endPreLabel.backgroundColor = [UIColor clearColor];
+    [_endPreLabel setText:@"結束殘壓"];
+    [scrollView addSubview:_endPreLabel];
+    
+    _endPreField = [[UITextField alloc] initWithFrame:CGRectMake(213, 356, 97, 30)];
+    _endPreField.backgroundColor = [UIColor clearColor];
+    [_endPreField setTag:107];
+    _endPreField.delegate = self;
+    _endPreField.placeholder = @"60 bar";
+    _endPreField.borderStyle = UITextBorderStyleRoundedRect;
+    _endPreField.adjustsFontSizeToFitWidth = YES;
+    _endPreField.textAlignment = NSTextAlignmentCenter;
+    [scrollView addSubview:_endPreField];
+    
+    
+    maxDepLabel = [[UILabel alloc] initWithFrame:CGRectMake(345, 326, 100, 21)];
+    maxDepLabel.backgroundColor = [UIColor clearColor];
+    [maxDepLabel setText:@"最大深度"];
+    [scrollView addSubview:maxDepLabel];
+    
+    maxDepField = [[UITextField alloc] initWithFrame:CGRectMake(330, 356, 97, 30)];
+    maxDepField.backgroundColor = [UIColor clearColor];
+    [maxDepField setTag:108];
+    maxDepField.delegate = self;
+    maxDepField.placeholder = @"40 M";
+    maxDepField.borderStyle = UITextBorderStyleRoundedRect;
+    maxDepField.adjustsFontSizeToFitWidth = YES;
+    maxDepField.textAlignment = NSTextAlignmentCenter;
+    [scrollView addSubview:maxDepField];
+    
+    divetimeLabel = [[UILabel alloc] initWithFrame:CGRectMake(465, 326, 100, 21)];
+    divetimeLabel.backgroundColor = [UIColor clearColor];
+    [divetimeLabel setText:@"潛水時間"];
+    [scrollView addSubview:divetimeLabel];
+    
+    divetimeField = [[UITextField alloc] initWithFrame:CGRectMake(450, 356, 97, 30)];
+    divetimeField.backgroundColor = [UIColor clearColor];
+    [divetimeField setTag:111];
+    divetimeField.delegate = self;
+    divetimeField.placeholder = @"in minutes";
+    divetimeField.borderStyle = UITextBorderStyleRoundedRect;
+    divetimeField.adjustsFontSizeToFitWidth = YES;
+    divetimeField.textAlignment = NSTextAlignmentCenter;
+    [scrollView addSubview:divetimeField];
+    
+    temperLabel = [[UILabel alloc] initWithFrame:CGRectMake(125, 220, 100, 21)];
+    temperLabel.backgroundColor = [UIColor clearColor];
+    [temperLabel setText:@"水溫"];
+    [scrollView addSubview:temperLabel];
+    
+    temperField = [[UITextField alloc] initWithFrame:CGRectMake(97, 246, 97, 30)];
+    temperField.backgroundColor = [UIColor clearColor];
+    [temperField setTag:109];
+    temperField.delegate = self;
+    temperField.placeholder = @"";
+    temperField.borderStyle = UITextBorderStyleRoundedRect;
+    temperField.textAlignment = NSTextAlignmentCenter;
+    temperField.adjustsFontSizeToFitWidth = YES;
+    [scrollView addSubview:temperField];
+    
+    visiLabel = [[UILabel alloc] initWithFrame:CGRectMake(497, 220, 100, 21)];
+    visiLabel.backgroundColor = [UIColor clearColor];
+    [visiLabel setText:@"能見度"];
+    [scrollView addSubview:visiLabel];
+    
+    visiField = [[UITextField alloc] initWithFrame:CGRectMake(477, 246, 97, 30)];
+    visiField.backgroundColor = [UIColor clearColor];
+    [visiField setTag:110];
+    visiField.delegate = self;
+    visiField.placeholder = @"15M";
+    visiField.borderStyle = UITextBorderStyleRoundedRect;
+    visiField.textAlignment = NSTextAlignmentCenter;
+    visiField.adjustsFontSizeToFitWidth = YES;
+    [scrollView addSubview:visiField];
+    
+    mixtureLabel = [[UILabel alloc] initWithFrame:CGRectMake(480, 88, 100, 21)];
+    mixtureLabel.backgroundColor = [UIColor clearColor];
+    [mixtureLabel setText:@"混合濃度"];
+    [scrollView addSubview:mixtureLabel];
+    
+    mixtureField = [[UITextField alloc] initWithFrame:CGRectMake(480, 124, 97, 30)];
+    mixtureField.backgroundColor = [UIColor clearColor];
+    [mixtureField setTag:112];
+    mixtureField.delegate = self;
+    mixtureField.borderStyle = UITextBorderStyleRoundedRect;
+    mixtureField.adjustsFontSizeToFitWidth = YES;
+    mixtureField.textAlignment = NSTextAlignmentCenter;
+    [scrollView addSubview:mixtureField];
+    
+    oxygenLabel = [[UILabel alloc] initWithFrame:CGRectMake(125, 450, 100, 21)];
+    oxygenLabel.backgroundColor = [UIColor clearColor];
+    [oxygenLabel setText:@"氧氣"];
+    [scrollView addSubview:oxygenLabel];
+    
+    oxygenField = [[UITextField alloc] initWithFrame:CGRectMake(97, 476, 97, 30)];
+    oxygenField.backgroundColor = [UIColor clearColor];
+    [oxygenField setTag:113];
+    oxygenField.delegate = self;
+    oxygenField.placeholder = @"%";
+    oxygenField.borderStyle = UITextBorderStyleRoundedRect;
+    oxygenField.adjustsFontSizeToFitWidth = YES;
+    oxygenField.textAlignment = NSTextAlignmentCenter;
+    [scrollView addSubview:oxygenField];
+    
+    nitrogenLabel = [[UILabel alloc] initWithFrame:CGRectMake(250, 450, 100, 21)];
+    nitrogenLabel.backgroundColor = [UIColor clearColor];
+    [nitrogenLabel setText:@"氮氣"];
+    [scrollView addSubview:nitrogenLabel];
+    
+    nitrogenField = [[UITextField alloc] initWithFrame:CGRectMake(222, 476, 97, 30)];
+    nitrogenField.backgroundColor = [UIColor clearColor];
+    [nitrogenField setTag:114];
+    nitrogenField.delegate = self;
+    nitrogenField.placeholder = @"%";
+    nitrogenField.borderStyle = UITextBorderStyleRoundedRect;
+    nitrogenField.textAlignment = NSTextAlignmentCenter;
+    nitrogenField.adjustsFontSizeToFitWidth = YES;
+    [scrollView addSubview:nitrogenField];
+
+    heliumLabel = [[UILabel alloc] initWithFrame:CGRectMake(380, 450, 100, 21)];
+    heliumLabel.backgroundColor = [UIColor clearColor];
+    [heliumLabel setText:@"氦氣"];
+    [scrollView addSubview:heliumLabel];
+    
+    heliumField = [[UITextField alloc] initWithFrame:CGRectMake(352, 476, 97, 30)];
+    heliumField.backgroundColor = [UIColor clearColor];
+    [heliumField setTag:115];
+    heliumField.delegate = self;
+    heliumField.placeholder = @"%";
+    heliumField.borderStyle = UITextBorderStyleRoundedRect;
+    heliumField.adjustsFontSizeToFitWidth = YES;
+    heliumField.textAlignment = NSTextAlignmentCenter;
+    [scrollView addSubview:heliumField];
+    
+    
+    lowppo2Label = [[UILabel alloc] initWithFrame:CGRectMake(495, 450, 100, 21)];
+    lowppo2Label.backgroundColor = [UIColor clearColor];
+    [lowppo2Label setText:@"低ppO2"];
+    [scrollView addSubview:lowppo2Label];
+    
+    lowppo2Field = [[UITextField alloc] initWithFrame:CGRectMake(472, 476, 97, 30)];
+    lowppo2Field.backgroundColor = [UIColor clearColor];
+    [lowppo2Field setTag:116];
+    lowppo2Field.delegate = self;
+    lowppo2Field.borderStyle = UITextBorderStyleRoundedRect;
+    lowppo2Field.adjustsFontSizeToFitWidth = YES;
+    lowppo2Field.textAlignment = NSTextAlignmentCenter;
+    [scrollView addSubview:lowppo2Field];
+    
+    highppo2Label = [[UILabel alloc] initWithFrame:CGRectMake(615, 450, 100, 21)];
+    highppo2Label.backgroundColor = [UIColor clearColor];
+    [highppo2Label setText:@"高ppO2"];
+    [scrollView addSubview:highppo2Label];
+    
+    highppo2Field = [[UITextField alloc] initWithFrame:CGRectMake(592, 476, 97, 30)];
+    highppo2Field.backgroundColor = [UIColor clearColor];
+    [highppo2Field setTag:117];
+    highppo2Field.delegate = self;
+    highppo2Field.placeholder = @"";
+    highppo2Field.borderStyle = UITextBorderStyleRoundedRect;
+    highppo2Field.textAlignment = NSTextAlignmentCenter;
+    highppo2Field.adjustsFontSizeToFitWidth = YES;
+    [scrollView addSubview:highppo2Field];
+    
+    
     
 }
 
